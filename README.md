@@ -31,6 +31,8 @@ Or run in the CoCalc(SageMath cloud service) https://cocalc.com
 
 ## Resources Used
 
+*The TeXBook* by Donald E.Knuth
+
 *What is a matroid* by James Oxley
 
 *Matroid Theory* by James Oxley
