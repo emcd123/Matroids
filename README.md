@@ -19,7 +19,7 @@ Written in LaTeX
 ## Running the project
 LaTeX
 
-Can be from https://www.sharelatex.com/
+Can be run from https://www.sharelatex.com/
 
 Or using TeX/ TeXmaker http://www.xm1math.net/texmaker/
 
