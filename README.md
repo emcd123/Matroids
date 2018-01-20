@@ -18,14 +18,17 @@ Written in LaTeX
 
 ## Running the project
 LaTeX
+
 Can be from https://www.sharelatex.com/
 Or using TeX/ TeXmaker http://www.xm1math.net/texmaker/
 
 Ptyhon
+
 Can be run in the python interpreter
 Installed from https://www.python.org/
 
 SageMath  
+
 Can be installed from http://doc.sagemath.org/html/en/installation/  
 Or run in the CoCalc(SageMath cloud service) https://cocalc.com
 
