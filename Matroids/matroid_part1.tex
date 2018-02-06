@@ -1,0 +1,76 @@
+\documentclass{article}
+\title{Matroids}
+\author{emcd123, Owen McDonnell}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+
+\newenvironment{rcases}
+  {\left.\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+
+\newcounter{excercise}
+\newcounter{solution}
+
+\newcommand\Excercise{%
+  \textbf{Excercise:}~%
+  \setcounter{solution}{0}%
+}
+
+\newcommand\TheSolution{%
+  \textbf{Solution:}\\%
+}
+
+  
+\begin{document}
+\begin{defn}
+If M is a matroid , then is there exists a bijection from the ground set of $ M_i $ to the ground set of $ M_j$, such that a set is independent in the first matroid if and only if it is independent in the second matroid, then $M_i$ and $M_j$ are said to be isomorphic 
+\end{defn}
+
+\Excercise \textbf{2.4}
+
+Let E be a set, $ \left\{ 1, 2, 3 \right\}$
+
+i$)$ Show there are exactly eight non-isomorphic matroids on E.
+
+ii$)$ How many non-isomorphic matroids are there on a 4-element set?
+
+Let I be the set of subsets as defined above.
+
+\TheSolution
+\hspace*{10px} i)
+  \[ \left\{ \emptyset \right\} \]  
+  \[  \left\{ \left\{ \emptyset \right\} , \left\{ 1 \right\} \right\} \cong \left\{ \left\{ \emptyset \right\} , \left\{ 2 \right\} \right\} \cong \left\{ \left\{ \emptyset \right\} , \left\{ 3 \right\} \right\} \]  
+  \[  \left\{ \left\{ \emptyset \right\} , \left\{ 1 \right\}, \left\{ 2 \right\} \right\} \]
+  \[  \left\{ \left\{ \emptyset \right\} , \left\{ 1 \right\}, \left\{ 2 \right\}, \left\{ 3 \right\} \right\}  \]
+\[ \left\{ \left\{ \emptyset \right\} , \left\{ 1 \right\},\left\{ 2 \right\} , \left\{ 1, 2 \right\} \right\} \cong \[ \left\{ \left\{ \emptyset \right\} , \left\{ 1 \right\}, \left\{ 3 \right\} , \left\{ 1, 3 \right\} \right\} \cong \[ \left\{ \left\{ \emptyset \right\} , \left\{ 2 \right\}, \left\{ 3 \right\} , \left\{ 2, 3 \right\} \right\} \] 
+  \[  \left\{ \left\{ \emptyset \right\} , \left\{ 1 \right\}, \left\{ 2 \right\}, \left\{ 3 \right\}, \left\{ 1, 2 \right\}, \left\{ 1, 3 \right\} \right\}  \]
+  \[  \left\{ \left\{ \emptyset \right\} , \left\{ 1 \right\}, \left\{ 2 \right\}, \left\{ 3 \right\}, \left\{ 1, 2 \right\}, \left\{ 1, 3 \right\} , \left\{ 2, 3 \right\} \right\}  \]
+  \[  \left\{ \left\{ \emptyset \right\} , \left\{ 1 \right\}, \left\{ 2 \right\}, \left\{ 3 \right\}, \left\{ 1, 2 \right\}, \left\{ 1, 3 \right\} , \left\{ 2, 3 \right\} , \left\{ 1, 2, 3 \right\} \right\}  \]
+
+	ii)
+	\[ E = \left\{ \emptyset \right\} ; |I| = 2^0 = 1 \]
+	\[ E = \left\{ 1 \right\} ; |I| = 2^1 = 2 \]
+	\[ E = \left\{ 1, 2 \right\} ; |I| = 2^2 = 4 \]
+	\[ E = \left\{ 1, 2, 3 \right\} ; |I| = 2^3 = 8 \]
+	\[ E = \left\{ 1, 2, 3, 4 \right\} ; |I| = 2^4 = 16 \]
+	\hspace*{10px} So $|I|$ is bounded above by $2^n$ for $n \in \mathbb{N}$
+
+
+
+
+\end{document}

@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array, tikz,tkz-berge}
+\usepackage{tkz-graph}
+
+\title{Undergraduate Project Proposal}
+\author{Owen McDonnell, 14361511}
+\date{January 2018}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+
+\newenvironment{rcases}
+  {\left.\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+
+\newcounter{excercise}
+\newcounter{solution}
+\newcounter{Question}
+
+\newcommand\Excercise{%
+  \textbf{Excercise:}~%
+  \setcounter{solution}{0}%
+}
+
+\newcommand\TheSolution{%
+  \textbf{Solution:}\\%
+}
+
+\newcommand\Question{%
+    \textbf{Question:}~%
+    \setcounter{Question}{0}%
+}
+\newcommand\Notation{%
+  \textbf{Notation:}~%
+}
+
+\newcommand\Proof{%
+    \textbf{Proof:}~%
+}
+
+\setlength{\droptitle}{-10em}
+
+\begin{document}
+\maketitle
+
+We plan to study matroids from scratch, following Oxley's text \cite{ox_book} together with \cite{ox_paper}. A matroid is a structure that abstracts and generalizes the notion of linear independence in vector spaces. There are many equivalent ways to define a matroid, the most significant being in terms of independent sets, bases, circuits, closed sets or flats, closure operators, and rank functions.\\
+\begin{defn}
+A matroid is a pair (E,\mathcal{I}) with finite ground set E and \mathcal{I} being a collection of independent subsets of E satisfying the following conditions
+
+\vspace{2mm}
+
+\noindent (I1): The empty set is always independent\\
+\noindent (I2): Every subset of an independent set is independent\\
+\noindent (I3): If $ A $ and $ B $ are two independent sets (i.e., each set is independent) of \mathcal{I} and $ A $ has more elements than $ B $, then there exists $ x \in A \setminus B $ such that $ B \cap \{ x \} $ is in \mathcal{I}
+\end{defn}
+
+\vspace{2mm}
+
+We will consider the motivating problems and examples from Oxley's work and using a mathematical software package attempt to reproduce some currently best-known results of the enumeration problems. Our primary target is to explain the connection between matroids and the greedy algorithm.
+
+\vspace{1mm}
+
+The Greedy algorithm is an interesting characterization of matroids in that it arises frequently in problems related to combinatorial optimzation. For example the well known graph optimization problem: finding the minimum spanning tree. Leading to a connection between Kruskal's algorithm and matroids.
+
+\begin{thebibliography}{}
+\bibitem{ox_book}
+    Oxley, James (1992), Matroid Theory, Oxford: Oxford University Press, ISBN 0-19-853563-5, MR 1207587, Zbl 0784.05002.
+\bibitem{ox_paper}
+    James Oxley : What is a matroid? https://www.math.lsu.edu/~oxley/survey4.pdf
+    
+    
+
+\end{thebibliography}
+\end{document}

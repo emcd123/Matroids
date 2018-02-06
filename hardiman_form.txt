@@ -1,0 +1,202 @@
+The project is concerned with the double Burnside ring of a finite
+group G, its computation in concrete cases, and the development of a
+general theory valid for all finite groups. The double Burnside ring
+is an abstract associated to any finite group in a way that is best
+explained after looking at the (plain) Burnside ring, a
+well-studied tool for investigating a finite group.
+Abstractly, B(G) is defined as the Grothendieck ring of the category
+of finite G-sets. Through the connection between transitive G-actions
+and the conjugacy classes of subgroups of G, the Burnside ring encodes
+information about the subgroup structure and other
+properties of the group. In a remarkable result from 1969, Dress has
+characterized groups as solvable if and only if the spectrum of the
+Burnside ring is connected.
+The Burnside ring is a commutative semi-simple ring. In a concrete
+fashion, B(G) can be constructed as a square matrix of non-negative
+integers, called the 'table of marks' of G. This table of marks
+becomes difficult to compute once G has a certain size. Algorithms
+for the efficient computation of a table of marks, and hence the
+Burnside ring of G were developed in recent years by the proposed
+project supervisor and his collaborators. The GAP
+system for computational discrete mathematics maintains and ships with
+a database of known tables of marks of interesting groups.
+The double Burnside ring B(G,G) of G is the Grothendieck ring of the
+category of finite G,G-bisets. Here, a G,H-biset for two groups G and
+H, is a set on which G acts from the left, and H acts from the right,
+and the two actions commute. The ring B(G,G) has a lot in common with
+the Burnside ring B(GxG) of the direct product of G with itself, but
+it carries a different multiplication. In particular, B(G,G) is only
+commutative if G is the trivial groups, and is only semi-simple if G
+is cyclic.
+The table of marks of GxG and its relation to B(G,G) have been studied
+, and successfully applied to construct B(G,G) for the
+symmetric group on three points. This small group G of size 6, so
+far essentially the only non-abelian example of a faithful
+representation of B(G,G) as a matrix ring.
+The project objective is using and extending the tools developed
+above(see arXiv:1704.03433 G.Pfeiffer, B. Masterson) , combining them with the results
+from [1] focusing on
+analyzing the structure of the double Burnside ring B(G,G) for more
+and larger groups G. The collection of examples will be used to
+develop the general structure theory of double Burnside rings.
+As algebras in characteristic zero in general are not semi-simple,
+double Burnside rings are interesting objects in their own right.
+Also being important because of their relations to other branches of
+algebra, such as the representation theory of finite groups.
+[1] R. Boltje and S. Danz, A ghost algebra of the double Burnside algebra in
+characteristic zero. J. Pure and Appl. Algebra 217 (2013), 608-635.
+
+
+
+
+
+
+The project is designed in such a way that the standard methodologies of a computational
+group theory project do apply.
+The main idea here is to first translate results and techniques from the mathematical
+literature into effective computer programs, within the existing framework of a computer
+algebra system.
+This step involves a review of the existing literature, as well as a review of computer
+algebra systems and their fitness for purpose.
+Next, the software tools developed in this step are applied to small examples, to test their
+correctness and efficiency.
+Then, larger examples are studied with the expectation to gain new general theoretical
+insights.
+Finally, any hypotheses and conjectures derived from those insights need to be justified
+by a rigorous mathematical proof,which is then subjected to a peer review process.
+
+
+
+
+The project requires specialist knowledge in abstract algebra and in computer algebra
+software that can be used for the project.
+The representation theory of finite groups and finite dimensional algebras is a powerful
+and very refined algebraic theory.
+The theory is not part of the undergraduate mathematics curriculum at Irish universities.
+It is, however, easily accessible from basic knowledge in abstract algebra and in particular
+group theory.
+
+
+
+
+Year One will consist of an in-depth review of previously published literature on the theory
+of Burnside Rings and its tables of marks.
+In order to get to sufficient level needed to perform high quality research in abstract
+algebra. I will be enrolled in specialist training as part of the structured PhD program in
+NUI Galway, studying advanced topics in abstract algebra and representation theory of
+finite groups. I must also learn a suitable software language on which to experiment
+findings.
+Risk is low in the first year as a wealth of existing literature is easily accessible. Although
+the software required might not be publicly available.
+Building on year one , the second year will focus primarily on software
+design/development in order to recreate results from reviewed literature, and perform
+experimentation on existing frameworks for generating tables of marks for finite groups of
+small order.
+Again low risk in this year, as examples are small and previously researched.
+In the third year, we build on the examples generated in year two and our chosen software
+setup in order to perform experiments on the theory of my project.
+Generating new examples of table of marks for finite groups that have not been generated
+previously. Therefore extending the theory of table of marks/double Burnside rings
+significantly.
+Risks in this year include providing sufficient proofs of theorems. As a result of this there is
+no guarantee that proof of a general theorem can be found within a reasonable time
+frame. As a result ,year three has much higher risks than previous.
+However, this risk is mitigated by the fact that explicitly calculated examples are of interest
+in their own right;
+and any software developed, if properly packaged and documented, will be of use for the
+general mathematical community.
+The final year of this PhD project will be primarily in gathering all research done and
+software created. Leading to writing a dissertation on the findings of my research.
+
+
+
+NUI Galway lecturers are consistently among the best, and recognised through the
+National Teaching Awards, and other award programmes.
+Many high quality papers are published in the college of mathematics in NUIG. With a
+significant portion of papers coming from my area of interest ,computational algebra. As a
+consequence of this, NUI Galway has a number of experts in this field available to choose
+from as potential supervisors.
+A centre for fostering research mathematics exists here called the de Brún Centre for
+Mathematics. The members of this group research in the following areas relevant to my
+project: Computational homology,Representation theory, Computation with linear groups
+and algebraic design theory. All promising modern fields of algebra.
+The algebra cluster of the centre offers a wealth of experience and teaching from experts
+in the field of algebra,geometry and their computational aspects along with a wide variety
+of seminars and workshops from international experts. Including for example the annual
+Groups in Galway conference.
+This university is the ideal environment both academically and socially for doing a PhD
+program
+
+
+
+
+After discussing potential projects with many of the academic staff of this university. I
+decided to work with Professor Gotz Pfeiffer.
+Whose interests lie in Finite Groups, Representation Theory and Computer Algebra. And
+is very well published in these fields, with particular interest in the Burnside ring of a finite
+group and its table of marks.
+See [1], [2], [3].
+The proposed supervisor has also advised a recent PhD student who made significant
+contributions to this field of research, see [3]. As someone driven to make a significant
+advancement in the theory of Burnside rings and specifically the double Burnside ring, this
+is the perfect supervisor for my PhD.
+[1] G. Pfeiffer, The Subgroups of $M_{24}$ or How to Compute the Table
+of Marks of a Finite Group. Experiment. Math. 6 (1997) 247-270.
+[2] L. Naughton and G. Pfeiffer, Computing the Table of Marks of a
+Cyclic Extension. Math.~Comp. 81 (2012), 2419-2438.
+[3] B. Masterson and G. Pfeiffer, On the Table
+
+
+
+
+
+The environment of the de Brun Centre for Mathematics at NUI Galway provides a range
+of opportunities for knowledge dissemination. In regular reading groups and student
+seminars, postgraduates can present to each other results from the existing literature as
+well as results arising from their own research.
+The annual Research Day of the School of Mathematics, Statistics and Applied
+Mathematics includes a poster presentation for all research students of the school. The
+conference Groups in Galway which is hosted each year by the de Brun Centre provides a
+further opportunity for a poster presentation for an international audience, and a
+conference talk for a PhD project that is complete or nearing completion.
+This project's findings will also be presented at annual conferences outside Ireland, such
+as the Postgraduate Group Theory Conference in the UK, and the Nikolaus Conference
+on Computational Representation Theory in Aachen, Germany.
+The theoretical results obtained from this project will be written up as mathematical
+research papers in the final years of the project, to be published in leading mathematics
+journals.
+The software developed as part of the project will be made freely available as a
+documented package for the GAP system.
+
+
+
+
+
+This project resonated with me as an entryway to an untapped area of research allowing me to learn and work with all
+forms of algebra and its structures.I wish to realise my potential for academic research and to contribute to this area of
+mathematics. In both academia and industry, there is a desire for individuals with the ability to research problems and
+present solutions. This PhD, will mature my ability to communicate and learn from a large spectrum of people building
+the skill-sets necessary for the future.
+I have undertaken research projects in the fields of mathematics and science,the first of which, as a sixteen year old in a
+small team of students, Tasked originally with inventing a science based product with the potential to improve the lives of
+the public in some way. The project targeted food safety. This task included individual creativity and research, seeing
+what had been tried and failed, and subsequently analyzing these attempts. I learnt many skills : mathematical modeling,
+statistical testing and the biology behind bacterial growth. Networking with professionals in the field & the biology and
+chemistry faculty in NUIG, significant progress was made. We created a product that could signal accurately when food
+has thawed and refrozen causing bacteria to spread and lie dormant. As a result, I achieved awards from the, Institute of
+Physics Ireland, BT Young Scientist exhibition and Silver Crest for STEM research.
+I also carried out an internship with the College of Mathematics in NUIG, the summer prior to final year. Consisting of
+choosing a supervisor in my field of interest and agreeing on a project. I chose to work with abstract algebra. My project;
+factorizing polynomials over Finite Fields using Berlekamp/Cantor-zassenhaus algorithms appealed to me because of
+the modernity(1967/1981) and lack of previous research. I learned how research proposals are written. In order to
+understand these algorithms, I learnt to navigate research paper databases and locate the specific material needed.
+These papers were significantly denser than anything seen in my undergrad requiring techniques in reading and
+processing information efficiently. I had acquired quite a knowledge of computer programming(python,Perl,c++,r etc) but
+had not previously used software capable of working with abstract structures such as fields. My supervisor suggested
+SageMath, I agreed. Having the ability to use and prototype new software quickly and perform complexity analysis to
+compare effectiveness of each technique,this allowed me to immediately begin creating basic models of these
+algorithms. Creating working prototypes of the algorithms, I found a way to document and publish in an easily accessible
+way, by using git/github. It took many revisions to create documentation and technical specifications which adhered to
+best practice.On completion, I presented my findings and research to a panel of lecturers in my university across many
+fields of mathematics. These acquired skills will be invaluable in aiding me during the PhD.
+Having a great interest in mathematics I wish
