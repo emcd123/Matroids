@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
-\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array, tikz,tkz-berge,physics}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array, tikz,tkz-berge}
 \usepackage{tkz-graph}
 
 \title{Matroids And their Graphs}
@@ -81,22 +81,22 @@
  \vspace{5mm}
  
  \noindent Let $G$ be a graph and $I$ be the set of all cyclefree subgraphs of G\\
- Let $ A ,B  \in  I $ with $ \abs{A}  =  \abs{B}  + 1 $
+ Let $ A ,B  \in  I $ with $ |A|  =  |B|  + 1 $
  
  \vspace{3mm}
  
- \noindent To prove $ I3 $ of the definition of a \textit{matroid}, We show that for some $ a \in A , B \cup \{a \} \in I $  we should consider $ B \cup \{a \} $ for each $ a \in A $. 
+ \noindent To prove $ I3 $ of the definition of a \textit{matroid}, We show that for some $ a \in A ,$\\$ B \cup \{a \} \in I $  we should consider $ B \cup \{a \} $ for each $ a \in A $. 
  
  \vspace{3mm}
  
  \noindent\Proof
  
- \noindent Now suppose $ \abs{A}  >  \abs{B} $ and that $\abs{A}  =  \abs{B} + 1$\\
+ \noindent Now suppose $ |A|  >  |B| $ and that $|A|  =  |B| + 1$\\
  Let 
- $ \abs{A \cap B} = s $ , $\abs{A \setminus B} = r$ ,
- $ \abs{A} = s + r $ and $ \abs{B} = s + r - 1$ ,
+ $ |A \cap B| = s $ , $ |A \setminus B| = r$ ,
+ $ |A| = s + r $ and $ |B| = s + r - 1$ 
  
-\noindent So $ \abs{B \setminus A} = r - 1$
+\noindent So $ |B \setminus A| = r - 1$
  
  \vspace{3mm}
  
@@ -106,10 +106,8 @@
  
  \vspace{2mm}
  
- \noindent Consider $ a_i $ for $ i = 1, 2,... $ must be a path $ b_{i1}, b_{12}, ... , b_{ir} $ of edges in $B$ such that $ a_i $ make a circuit
- 
- \textbf{Insert demonstration graph here!}
- 
+ \noindent Consider $ a_i $ for $ i = 1, 2,... $ there must be a path $ b_{i1}, b_{12}, ... , b_{ir} $ of edges in $B$ such that $ a_i $ make a cycle
+  
  \vspace{2mm}
  
  \begin{minipage}{.2\textwidth}
@@ -150,38 +148,37 @@
  \vspace{2mm}
  
 \noindent But $ P(b_j,b_k) \cap A $ is not necessarily disjoint\\
-\noindent if $ P(b_j,b_k) \subset A  $ then $ P(b_j,b_k) \cup \{ a_i \} $  would be a circuit\\ and then $ A \notin I $, so at least one of the $ \big( b_i \in P(b_j,b_k) \big) \in B \setminus A $
+\noindent if $ P(b_j,b_k) \subset A  $ then $ P(b_j,b_k) \cup \{ a_i \} $  would be a cycle\\ and then $ A$ would not be in $ \mathcal{I} $, so at least one of the $ b_i \in P(b_j,b_k) \in B \setminus A $
  
  \vspace{4mm}
  
- \noindent So we have $ a_1 $ joined to $ b_1$ ... $ a_r $ to $ b_r $
+ \noindent Given $A = \{a_1, ... ,a_r\} $ for each $a_i$ associate a $b_i \in B \setminus A$. Let $\hat{B} = \{b_1, ... ,b_r\}$
  
  \vspace{2mm}
  
- \noindent\textbf{Case 1: The $ b_i$'s are distinct}\\
- The $ b_i$'s are distinct and as shown previously each of the $ b_i$'s must be in $ \abs{B \setminus A} $ in order to avoid a circuit in $ A $.\\ 
+ \noindent Case 1: The $ b_i$'s are distinct\\
+ The $ b_i$'s are distinct and as shown previously each of the $ b_i$'s must be in $ |B \setminus A| $ in order to avoid a circuit in $ A $.\\ 
 \noindent Therefore,
-  $ \abs{B} \geqslant s + r $ as $ \abs{A}  = s + r $ \\Contradicting $ \abs{A}  >  \abs{B} $
+  $ |B| \geqslant A $ \\Contradicting $ |A|  >  |B| $
  
  \vspace{3mm}
  
 \noindent Hence, I3 holds
 
-\noindent\textbf{Case 2: When the $b_i$'s are not all distinct}
+\noindent Case 2: When the $b_i$'s are not all distinct
 
-Let $ b_1 = b_2 $. Now $ \abs{A} = \abs{B} + 2 $
+\noindent Let $ b_1 = b_2 $.
 
 \textbf{Again demo graph to be added depicting the two separate graphs and then the joined version highligting b1=b2}
 
-\noindent We use the same argument as in Case 1 only in this case we need two distinct $ b_i \in P( b_j, b_k) $ where $ b_i \in B \setminus A $ such that  $ P(b_j , b_k ) \cupp \{ a_i \} $ is a cycle.
+\noindent We use the same argument as in Case 1 only here we need two distinct $ b_i \in P( b_j, b_k) $ where $ b_i \in B \setminus A $ such that  $ P(b_j , b_k ) \cup \{ a_i \} $ is a cycle. This can be seen in the diagram above, there must be another edge in the union of the paths which is in $ B \setminus A$ or else we get a cycle in $A$
 
 \vspace{2mm}
 
-\noindent Otherwise, $ P(b_j,b_k) \subset A  $ then $ P(b_j,b_k) \cup \{ a_i \} $  would be a circuit\\ and then $ A \notin I $
+\noindent Otherwise, $ P(b_j,b_k) \subset A  $ then $ P(b_j,b_k) \cup \{ a_i \} $  would be a circuit\\ and then $ A \notin I $. As now, $ |B| \geq |A| $, and we have a contradiction.
 
-\noindent This as before violates the maximality of $ A $. As now, $ \abs{B} > \abs{A} $, and we have a contradiction.
-
-\noindent Hence I3 holds.
+\noindent Hence I3 holds.\\
+\qed
 
  
  \end{document}
