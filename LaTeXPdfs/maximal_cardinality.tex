@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array, tikz,tkz-berge, calrsfs}
+\usepackage{tkz-graph}
+
+\title{Matroids And their Graphs}
+\author{o.mcdonnell4@nuigalway.ie }
+\date{19 January 2018}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+
+\newenvironment{rcases}
+  {\left.\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+
+\newcounter{excercise}
+\newcounter{solution}
+\newcounter{Question}
+
+\newcommand\Excercise{%
+  \textbf{Excercise:}~%
+  \setcounter{solution}{0}%
+}
+
+\newcommand\TheSolution{%
+  \textbf{Solution:}\\%
+}
+
+\newcommand\Question{%
+    \textbf{Question:}~%
+    \setcounter{Question}{0}%
+}
+\newcommand\Notation{%
+  \textbf{Notation:}~%
+}
+
+\newcommand\Proof{%
+    \textbf{Proof:}~%
+}
+
+\setlength{\droptitle}{-10em}
+
+\begin{document}
+\maketitle
+ 
+ \section{Cardinality of maximal independent sets}
+ 
+ \begin{thm}
+ Show that if $\mathcal{I}$ is a non-empty hereditary set of subsets of a finite set E, then $(E,\mathcal{I})$ is a matroid if and only if, for all $X \subset E$, all maximal members of $\{I : I \in \mathcal{I} $ and $ I \subset X\}$ have the same number of elements
+ \end{thm}
+ 
+\noindent \Proof $(\implies)$ Let $B_1 , B_2$ be maximal elements of $\{I : I \in \mathcal{I} $and $ I \subset X\}$ \\
+\noindent And assume $|B_1| < |B_2|$
+Then since $B_1, B_2 \in \mathcal{I}$
+\\
+There $\exists e \in (B_2 \setminus B_1)$ such that $B_1 \cap \{e\} \in \mathcal{I}$
+\\
+This contradicts our maximality of $B_1$\\
+\noindent $\implies |B_1| \geq |B_2|$
+\\
+Now repeat same procedure but assume $|B_2| > |B_1|$\\
+\noindent $\implies |B_1| = |B_2|$
+\\
+ \noindent $\implies$ All maximal elements of the set $\{I : I \in \mathcal{I} $ and $ I \subset X\}$ in out matroid M have the same cardinality i.e number of elements
+ \\ \qed
+ \end{document}

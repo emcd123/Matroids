@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array, tikz,tkz-berge, calrsfs}
+\usepackage{tkz-graph}
+
+\title{Matroids And their Graphs}
+\author{o.mcdonnell4@nuigalway.ie }
+\date{19 January 2018}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+
+\newenvironment{rcases}
+  {\left.\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+
+\newcounter{excercise}
+\newcounter{solution}
+\newcounter{Question}
+
+\newcommand\Excercise{%
+  \textbf{Excercise:}~%
+  \setcounter{solution}{0}%
+}
+
+\newcommand\TheSolution{%
+  \textbf{Solution:}\\%
+}
+
+\newcommand\Question{%
+    \textbf{Question:}~%
+    \setcounter{Question}{0}%
+}
+\newcommand\Notation{%
+  \textbf{Notation:}~%
+}
+
+\newcommand\Proof{%
+    \textbf{Proof:}~%
+}
+
+\setlength{\droptitle}{-10em}
+
+\begin{document}
+\maketitle
+ 
+ \section{Matroids imply Circuits: Alternative C3}
+ \begin{defn} By using (I1)–(I3) , it is not difficult to show that the collection $\mathcal{C}$ of circuits of a matroid M has the following three properties:\\
+(C1) The empty set is not in $\mathcal{C}$\\
+(C2) No member of $\mathcal{C}$ is a proper subset of another member of $\mathcal{C}$\\
+(C3) if $ C_1 $ and $ C_2 $ are distinct members of $ C $ and 
+$ e \in C_1 \cup C_2 $, then $ (C_1 \cap C_2 ) \setminus \{e\} $ contains a member of $\mathcal{C}$ .
+ \end{defn}
+ 
+ \vspace{5mm}
+ 
+ \begin{thm}
+ A matroid M $\implies$ all circuits in $\mathcal{C}$ satisfy (C1-C3).
+ \end{thm}
+ 
+ \noindent\Proof Let $A,b \in \mathcal{C, A\neq B}$
+ \\
+ \noindent Let $e \in A \cup B$
+ \\
+ \noindent Suppose(seeking a contradiction) that $(A \cap B) \setminus \{e\}$ is independent.
+ \\
+ \noindent Let $x \in A \setminus B (x \neq e)$
+ \\
+ \noindent $\implies A \setminus \{x\} \in \mathcal{I}$ i.e independent.
+ \\
+ \noindent We cann add elements of $(A \cap B) \setminus \{e\}$ to $A \setminus \{x\}$ retaining independence until we have $|A \cap B| - 1$ elements.
+ \\
+ \noindent But now our new set $(A \cap B) \setminus \{x\}$ contains all of $B$ and $B \in \mathcal{C}$. Therefore, we have a contradiction, $(A \cap B) \setminus \{e\}$ cannot be independent
+ \\
+ \qed
+ \end{document}
