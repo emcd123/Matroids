@@ -71,7 +71,7 @@ A base is a maximally independent subset of $\mathcal{I}$.\\
 \noindent A seen previously all maximally independent sets in a matroid have the same cardinality.
 \end{defn}
 
-\Proof (B2) \\
+\noindent \Proof (B2) \\
 \noindent $(\implies)$ Let $B_1 ,B_2 \in \mathcal{B}, B_1 \neq B_2$ \\
 \noindent $|B_1| = |B_2|$ so I3 does not directly apply here.\\
 \noindent Let $x \in B_1 \setminus B_2 \implies x \in B_1, x \notin B_2$\\
@@ -80,5 +80,22 @@ A base is a maximally independent subset of $\mathcal{I}$.\\
 \noindent Now $\exists y \in B_2 \setminus B_1$ such that $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{I}$\\
 $|(B_1 \setminus \{x\}) \cup \{y\}| = |B_1 \setminus \{x\}| + 1 = |B_1| = ... = |B_r|$ as all maximal elements of $\mathcal{I}$ have the same cardinality $\implies (B_1 \setminus \{x\}) \cup \{y\}$ is maximal in $\mathcal{I}$\\
 $\implies (B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$
+
+\vspace{4mm}
+
+\noindent $( \Longleftarrow )$ If $\mathcal{B}$ satisfies (B1) and (B2) then we have a matroid.\\
+\noindent By B1 $\mathcal{B}$ is always non-empty i.e it contains at least the null set which shows I1 holds.
+
+\vspace{2mm}
+
+\noindent By definition a base $B_1 \in \mathcal{B}$ is a maximally independent subset of E. $\forall B_i \in \mathcal{B}$ all the subsets $b_k$ of $B_i$  are also independent since $B_i$ is a maximally independent set. Therefore all those $b_k$ are in $\mathcal{I}$. $\implies$ (I2) holds. This shows a matroid can be generated through it's bases.
+
+\vspace{2mm}
+
+\noindent Assume that (I3) fails. meaning that, for $I_1, I_2 \in \mathcal{I}$, where $|I_1| = |I_2|+1,$ there $\exists y \in I_1 \setminus I_2$ such that $I_2 \cup \{y\} \in \mathcal{I}$.\\
+\noindent Let $B_1, B_2 \in \mathcal{B}, |B_1| = |B_2|$\\
+\noindent Let $x \in B_1 \setminus B_2$ then $B_1 \setminus \{x\} \subset B_1 \implies B_1 \setminus \{x\}$ is independent.\\
+\noindent Then there exists a $y \in B_2 \setminus (B_1 \setminus \{x\})$ such that $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$ due to (B2). And if $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$ then its is also in $\mathcal{I}$. Which is a contradiction. $\implies$ (I3) holds.
+
 \qed
 \end{document}
