@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array, tikz,tkz-berge, calrsfs}
+\usepackage{tkz-graph}
+
+\title{Matroids And their Graphs}
+\author{o.mcdonnell4@nuigalway.ie }
+\date{February 2018}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+
+\newenvironment{rcases}
+  {\left.\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+
+\newcounter{excercise}
+\newcounter{solution}
+\newcounter{Question}
+
+\newcommand\Excercise{%
+  \textbf{Excercise:}~%
+  \setcounter{solution}{0}%
+}
+
+\newcommand\TheSolution{%
+  \textbf{Solution:}\\%
+}
+
+\newcommand\Question{%
+    \textbf{Question:}~%
+    \setcounter{Question}{0}%
+}
+\newcommand\Notation{%
+  \textbf{Notation:}~%
+}
+
+\newcommand\Proof{%
+    \textbf{Proof:}~%
+}
+
+\setlength{\droptitle}{-10em}
+
+\begin{document}
+\maketitle
+ 
+ \section{Base characterisation of a matroid}
+ 
+ \begin{thm}
+ Let $\mathcal{B}$ be a set of subsets of a finite set E. Then $\mathcal{B}$ is the collection of bases of a matroid on E if and only if $\mathcal{B}$ satisfies the following conditions:\\
+ (B1) $\mathcal{B}$ is non-empty.\\
+ (B2) If $B_1$ and $B_2$ are member of $\mathcal{B}$ and $x \in B_1 \setminus B_2$, then there is an element $y$ of $B_1 \setminus B_2$ such that $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$.
+ \end{thm}
+ 
+\begin{defn}
+A base is a maximally independent subset of $\mathcal{I}$.\\
+\noindent A seen previously all maximally independent sets in a matroid have the same cardinality.
+\end{defn}
+
+\Proof (B2) \\
+\noindent $(\implies)$ Let $B_1 ,B_2 \in \mathcal{B}, B_1 \neq B_2$ \\
+\noindent $|B_1| = |B_2|$ so I3 does not directly apply here.\\
+\noindent Let $x \in B_1 \setminus B_2 \implies x \in B_1, x \notin B_2$\\
+\noindent $|B_1| = |B_1 \setminus \{x\}| + 1 \implies B_1 \setminus \{x\} \in \mathcal{I}$ but not in $\mathcal{B}$\\
+\noindent $|B_2| = |B_1 \setminus \{x\}| + 1$ so now we can use I3\\
+\noindent Now $\exists y \in B_2 \setminus B_1$ such that $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{I}$\\
+$|(B_1 \setminus \{x\}) \cup \{y\}| = |B_1 \setminus \{x\}| + 1 = |B_1| = ... = |B_r|$ as all maximal elements of $\mathcal{I}$ have the same cardinality $\implies (B_1 \setminus \{x\}) \cup \{y\}$ is maximal in $\mathcal{I}$\\
+$\implies (B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$
+\qed
+\end{document}

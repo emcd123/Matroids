@@ -74,7 +74,7 @@
 (C1) The empty set is not in $\mathcal{C}$\\
 (C2) No member of $\mathcal{C}$ is a proper subset of another member of $\mathcal{C}$\\
 (C3) if $ C_1 $ and $ C_2 $ are distinct members of $ C $ and 
-$ e \in C_1 \cup C_2 $, then $ (C_1 \cap C_2 ) \setminus \{e\} $ contains a member of $\mathcal{C}$ 
+$ e \in C_1 \cap C_2 $, then $ (C_1 \cup C_2 ) \setminus \{e\} $ contains a member of $\mathcal{C}$ 
  \end{defn}
  
  \vspace{5mm}
@@ -84,7 +84,7 @@ $ e \in C_1 \cup C_2 $, then $ (C_1 \cap C_2 ) \setminus \{e\} $ contains a memb
   \end{thm}
  
  \noindent\textbf\Proof \\
- \noindent (C1) is obvious as by $\mathcal{(I1)}$ the empty set must always be an independent set.
+ \noindent (C1) is obvious as by $I1$ the empty set must always be an independent set.
  
  \vspace{2mm}
  
@@ -92,30 +92,30 @@ $ e \in C_1 \cup C_2 $, then $ (C_1 \cap C_2 ) \setminus \{e\} $ contains a memb
  
  \vspace{2mm}
  
- \noindent (C3) Let $ A, B \in \mathcal{C} $ and suppose that(Seeking a contradiction) $ (A \cap B) \setminus \{e\} $ where $ e $ is $ \in (A \cup B) $ does not contain a circuit.\\
- \noindent Then $ (A \cap B) \setminus \{e\} $ is independent and therefore in $\mathcal{I}$
+ \noindent (C3) Let $ A, B \in \mathcal{C} $ and suppose that(Seeking a contradiction) $ (A \cup B) \setminus \{e\} $ where $ e $ is $ \in (A \cap B) $ does not contain a circuit.\\
+ \noindent Then $ (A \cup B) \setminus \{e\} $ is independent and therefore in $\mathcal{I}$
  
  \vspace{2mm}
  
 \noindent The set $ A \setminus B $ is non-empty.\\
  Let $ s \in A \setminus B    \implies s \in A$\\
- \noindent as $A$ is in $\mathcal{C}$ then it is minimally dependent.
+ \noindent as $A$ is in $\mathcal{C}$ it is minimally dependent.
  \noindent $\implies A \setminus \{s\} \in \mathcal{I}$ i.e is independent.
  
  \vspace{2mm}
  
-\noindent Let $J$ be a maximal independent set of $(A \cap B)$ with the following properties: $S \setminus \{s\} \subset J $ and therefore $ \{s\} \notin J $ but as B is a circuit there must be some element $t \in B$ that is not in $J$ . $s$ and $t$ are distinct.
+\noindent Let $J$ be a maximal independent set of $(A \cup B)$ with the following properties: $S \setminus \{s\} \subset J $ and therefore $ \{s\} \notin J $ but as B is a circuit there must be some element $t \in B$ that is not in $J$. $s$ and $t$ are distinct.
  
  \vspace{2mm}
  
-\noindent $\implies |J| $ must be at most equal to $|(A \cap B) \setminus \{s,t\}| $\\
- $\implies |J| \leq |(A \cap B) \setminus \{s,t\}| = |(A \cap B)| - 2 < |(A \cap B) \setminus \{e\}|$
+\noindent $\implies |J| $ must be at most equal to $|(A \cup B) \setminus \{s,t\}| $\\
+ $\implies |J| \leq |(A \cup B) \setminus \{s,t\}| = |(A \cup B)| - 2 < |(A \cup B) \setminus \{e\}|$
  
  \vspace{2mm} 
  
- \noindent Now by (I3) we can subsitute elements from $|(A \cap B) \setminus \{e\}|$ into $|(A \cap B) \setminus \{s,t\}|$ that are not in $|(A \cap B) \setminus \{s,t\}|$ but the only elements that fits this condition are $\{s,t\}$ and introducing either of these elements breaks the independence of $J$.
+ \noindent Now by (I3) we can subsitute elements from $|(A \cup B) \setminus \{e\}|$ into $|(A \cup B) \setminus \{s,t\}|$ that are not in $|(A \cup B) \setminus \{s,t\}|$ but the only elements that fits this condition are $\{s,t\}$ and introducing either of these elements breaks the independence of $J$.
  
-\noindent Therefore, $|(A \cap B) \setminus \{e\}|$ must contain a circuit\\
+\noindent Therefore, $|(A \cup B) \setminus \{e\}|$ must contain a circuit\\
  \qed
  
 \end{document}

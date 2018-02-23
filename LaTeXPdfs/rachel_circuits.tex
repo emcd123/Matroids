@@ -63,7 +63,7 @@
 (C1) The empty set is not in $\mathcal{C}$\\
 (C2) No member of $\mathcal{C}$ is a proper subset of another member of $\mathcal{C}$\\
 (C3) if $ C_1 $ and $ C_2 $ are distinct members of $ C $ and 
-$ e \in C_1 \cup C_2 $, then $ (C_1 \cap C_2 ) \setminus \{e\} $ contains a member of $\mathcal{C}$ .
+$ e \in C_1 \cap C_2 $, then $ (C_1 \cup C_2 ) \setminus \{e\} $ contains a member of $\mathcal{C}$ .
  \end{defn}
  
  \vspace{5mm}
@@ -72,19 +72,19 @@ $ e \in C_1 \cup C_2 $, then $ (C_1 \cap C_2 ) \setminus \{e\} $ contains a memb
  A matroid M $\implies$ all circuits in $\mathcal{C}$ satisfy (C1-C3).
  \end{thm}
  
- \noindent\Proof Let $A,b \in \mathcal{C, A\neq B}$
+ \noindent\Proof Let $A,b \in \mathcal{C}$, $A \neq B$
  \\
- \noindent Let $e \in A \cup B$
+ \noindent Let $e \in A \cap B$
  \\
  \noindent Suppose(seeking a contradiction) that $(A \cap B) \setminus \{e\}$ is independent.
  \\
- \noindent Let $x \in A \setminus B (x \neq e)$
+ \noindent Let $x \in A \setminus B$, noting that $x \neq e$
  \\
  \noindent $\implies A \setminus \{x\} \in \mathcal{I}$ i.e independent.
  \\
- \noindent We cann add elements of $(A \cap B) \setminus \{e\}$ to $A \setminus \{x\}$ retaining independence until we have $|A \cap B| - 1$ elements.
+ \noindent We can add elements of $(A \cup B) \setminus \{e\}$ to $A \setminus \{x\}$ retaining independence until we have $|A \cup B| - 1$ elements.
  \\
- \noindent But now our new set $(A \cap B) \setminus \{x\}$ contains all of $B$ and $B \in \mathcal{C}$. Therefore, we have a contradiction, $(A \cap B) \setminus \{e\}$ cannot be independent
+ \noindent But now our new set $(A \cup B) \setminus \{x\}$ contains all of $B$ and $B \in \mathcal{C}$. Therefore, we have a contradiction, $(A \cup B) \setminus \{e\}$ cannot be independent
  \\
  \qed
  \end{document}
