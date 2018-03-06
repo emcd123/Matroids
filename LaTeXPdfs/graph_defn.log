@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.20)  28 FEB 2018 09:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.20)  4 MAR 2018 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**bases_matroid.tex
-(./bases_matroid.tex
+**graph_defn.tex
+(./graph_defn.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -860,9 +860,8 @@ File: tkz-tool-arith.tex tkz-tool-arith 1.161 c
 \c@excercise=\count137
 \c@solution=\count138
 \c@Question=\count139
-
-(./bases_matroid.aux)
-\openout1 = `bases_matroid.aux'.
+ (./graph_defn.aux)
+\openout1 = `graph_defn.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
@@ -876,8 +875,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count140
 \scratchdimen=\dimen165
@@ -906,30 +904,47 @@ LaTeX Font Info:    Try loading font information for OMS+rsfs on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/latex/calrsfs/OMSrsfs.fd) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./bases_matroid.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 134--136
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--145
+
+ []
+
+[2] [3] (./graph_defn.aux) ) 
 Here is how much of TeX's memory you used:
  14436 strings out of 494910
- 277333 string characters out of 6179835
- 324507 words of memory out of 5000000
+ 277306 string characters out of 6179835
+ 325507 words of memory out of 5000000
  17409 multiletter control sequences out of 15000+600000
  12533 words of font info for 51 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,8n,56p,416b,198s stack positions out of 5000i,500n,10000p,200000b,80000s
-</u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on bases_matroid.pdf (1 page, 114531 bytes).
+ 55i,6n,56p,482b,198s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/r
+sfs/rsfs10.pfb>
+Output written on graph_defn.pdf (3 pages, 146295 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
