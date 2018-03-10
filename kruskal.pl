@@ -34,6 +34,9 @@ foreach my $k (@E){
 }
 print Dumper(\%TEMP);
 
+@TEMPVERTEX = @V;
+
+my $temp_edge = 'OO';
 while (%TEMP) {
 	sub MinWeightEdge{
 		my $min_weight_edge = $MAX_WEIGHT;
@@ -45,23 +48,21 @@ while (%TEMP) {
 				#print $min_key;
 			}
 		}
-		#print "\n" ,'Min weight: ', $min_weight_edge;
-		#print $TEMP{$min_key};
 		delete $TEMP{$min_key};
-		#print Dumper(\%TEMP);
-		#return $min_weight_edge;
 		return $min_key;
 	}	
-	my $temp_edge = MinWeightEdge(%TEMP, %FOREST);
+	$temp_edge = MinWeightEdge(%TEMP, %FOREST);
+
 	sub MatchVertexEdge{
 		my $ver_edge = $temp_edge;
+		print $ver_edge;
 		my @edge_components = split(//, $ver_edge);
-		print @edge_components;
-
+		foreach my $vertex (@edge_components){
+			push @{$FOREST{$vertex}}, $ver_edge;
+		}
 	}
-	MatchVertexEdge($temp_edge);
-	#push @{$FOREST{$index}}, $temp_edge;
+	MatchVertexEdge($temp_edge, %FOREST);
 }
-#print Dumper(\%FOREST);
+print Dumper(\%FOREST);
 #print Dumper(\%TEMP);
 exit;
