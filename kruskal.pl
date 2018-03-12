@@ -33,7 +33,7 @@ tie %TEMP, 'Tie::IxHash';
 foreach my $k (@E){
 	$TEMP{$k} = $WEIGHTS{$k};
 }
-print Dumper(\%TEMP);
+#print Dumper(\%TEMP);
 
 my $vertex_count = @V;
 my $temp_edge = 'OO';
@@ -42,9 +42,11 @@ while ($vertex_count > 1) {
 		my $min_weight_edge = $MAX_WEIGHT;
 		my $min_key = 0;
 		foreach my $var (keys %TEMP) {
-			if ($TEMP{$var} < $min_weight_edge) {
-				$min_weight_edge = $TEMP{$var};
-				$min_key = $var;		
+			if (($TEMP{$var} < $min_weight_edge)) {
+				#if(acyclic(%FOREST) == 0){
+					$min_weight_edge = $TEMP{$var};
+					$min_key = $var;		
+				#}
 			}
 		}
 		delete $TEMP{$min_key};
@@ -55,7 +57,6 @@ while ($vertex_count > 1) {
 
 	sub MatchVertexEdge{
 		my $ver_edge = $temp_edge;
-		print $ver_edge;
 		my @edge_components = split(//, $ver_edge);
 		foreach my $vertex (@edge_components){
 			push @{$FOREST{$vertex}}, $ver_edge;
@@ -64,7 +65,9 @@ while ($vertex_count > 1) {
 	MatchVertexEdge($temp_edge, %FOREST);
 }
 print Dumper(\%FOREST);
-acyclic(%FOREST);
+if(acyclic(%FOREST,@V) == 0){
+	print "Acyclic";
+}
 
 sub acyclic {
 	my @Discovered = ();
@@ -76,9 +79,35 @@ sub acyclic {
 		}
 	}
 	my @uniq_edgeset = uniq(@edge_set);
-	
-	foreach my $edge (@uniq_edgeset){
-		print $edge;
+	my @vertices = @V;
+	my $index = 0;
+	sub DFS{
+		my @discovered = ($vertices[$index]);
+		my @components = ();
+		my $startvertex = $vertices[$index];
+		foreach my $e (@uniq_edgeset){
+			my @edge = split(//, $e);
+			if($startvertex eq $edge[0]){
+				push @discovered, $edge[1];
+				push @components, @edge;
+			}
+		}
+		my $discoveredSize = @discovered;
+		my $componentsSize = @components;
+
+		$index = $index +1;
+		#print $index;
+		if($discoveredSize = $componentsSize - 1){
+			#print "Acyclic";
+			return 0;
+		}
+		else{
+			#print "Not Acyclic";
+			return 1;
+		}
+	}
+	while($index <= 3){
+	DFS(@uniq_edgeset,@vertices);
 	}
 }
 exit;
