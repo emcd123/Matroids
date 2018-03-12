@@ -6,7 +6,7 @@ use Tie::IxHash;
 
 my $MAX_WEIGHT = 10;
 #Implementing Kruskal's algorithm
-#Finding a maximal weight spanning tree in a undirected weighted graph
+#Finding a minimal weight spanning tree in a undirected weighted graph
 
 my @V = ('A', 'B', 'C', 'D');
 my @E = ('AB', 'AC', 'AD', 'BD', 'BC', 'CD');
@@ -23,7 +23,7 @@ print Dumper(\%WEIGHTS);
 my %FOREST;
 tie %FOREST, 'Tie::IxHash';
 foreach my $j (@V){
-	$FOREST{$j} = ();
+	$FOREST{$j} = [];
 }
 print Dumper(\%FOREST);
 
@@ -34,10 +34,10 @@ foreach my $k (@E){
 }
 print Dumper(\%TEMP);
 
-@TEMPVERTEX = @V;
+my $vertex_count = @V;
 
 my $temp_edge = 'OO';
-while (%TEMP) {
+while ($vertex_count > 1) {
 	sub MinWeightEdge{
 		my $min_weight_edge = $MAX_WEIGHT;
 		my $min_key = 0;
@@ -49,6 +49,7 @@ while (%TEMP) {
 			}
 		}
 		delete $TEMP{$min_key};
+		$vertex_count = $vertex_count - 1;
 		return $min_key;
 	}	
 	$temp_edge = MinWeightEdge(%TEMP, %FOREST);
@@ -65,4 +66,16 @@ while (%TEMP) {
 }
 print Dumper(\%FOREST);
 #print Dumper(\%TEMP);
+acyclic(%FOREST);
+
+sub acyclic {
+	my @Discovered = ();
+	my @edge_set = ();
+	foreach my $vertex (keys %FOREST){
+		my $length = scalar( @{ $FOREST{$vertex} } );
+		for ( my $m = 0; $m < $length; $m++) {
+			push @edge_set, $FOREST{$vertex}[$m];
+		}
+	}
+}
 exit;
