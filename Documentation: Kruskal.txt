@@ -1,0 +1,139 @@
+Documentation: Kruskal.pl
+
+#########################################################################################################################
+Errors:
+	1) Depth first search not optimally or properly implemented.
+	2) Graph is not checked for cycles at each step of the algorithm as needed.
+	3) Weights are non-negative but must be adapted to positive(i.e no zero weights).
+	4)Code is messy and poorly written.
+
+Needed:
+	1) Rewrite large section for both optimality and readability.
+	2) Fix implementation of DFS.
+	3) Display each step of algorithm in easy to see way for demonstration purposes.
+	4) Created a grpah object with methods for:
+		--> Generating the weights
+		--> Implementing Algorithms
+		--> Checking for cycles
+	5) Wish to have Kruskal's algorithm as a method instead of subroutine.
+	6) Add Prim's algorithm as method also as most of the work already done for this.
+
+########################################################################################################################
+
+
+Function:
+	Kruskal's algorithm is a minimum-spanning-tree algorithm which finds an edge of the least possible weight that connects any two trees in the forest.[1] It is a greedy algorithm in graph theory as it finds a minimum spanning tree for a connected weighted graph adding increasing cost arcs at each step.[1] This means it finds a subset of the edges that forms a tree that includes every vertex, where the total weight of all the edges in the tree is minimized. If the graph is not connected, then it finds a minimum spanning forest (a minimum spanning tree for each connected component).
+
+
+GRAPHS: HOW THEY ARE REPRESENTED
+
+In this script Graphs are treated as a perl hash. The vertices of the graph the keys, with the edges connected to those vertices as a list as the hash values.
+For example G = (E,V) is a graph with V as a vertex set, E as an edge set.
+And G is K_3 (The conplete graph of three vertices).
+
+V = ('A', 'B', 'C')
+E = ('AB', 'BC', 'AC')
+
+An edge e = AB is the edge joining the vertices A and B of the graph.
+
+So here,
+	G = {
+
+		A: ('AB', 'AC');
+
+		B: ('BC');
+
+		C: ('AC', 'BC');
+
+	}
+
+Note: AC in both arrays of A and C are the same edge!
+
+DATA: HOW IS DATA STORED IN THIS SCRIPT
+
+%FOREST 	-   Is a hash containing just the vertices of G as disconnected trees with no edges.
+				Here as outlined above the vertices are the keys, and empty lists show the edges.
+				This graph is to be filled until it contains a minimal weighted spanning tree of the graph G.
+
+%WEIGHTS	-	Positive weights are randomly assigned to the edges of G. With edges of G as keys
+				and the generated weights as the values.
+
+%TEMP		-	A temporary copy of %WEIGHTS which has its entries deleted as the algorithm iterates.
+
+ADDITIONAL FUNCTIONALITY FOR ABOVE HASHES
+
+use Data::Dumper qw(Dumper);
+	This is used to display the hash and in doing so to display out graph in the above outline method.
+
+use Tie::IxHash;
+	Hashes in Perl are not sorted in any naiive way and will appear in different order on subsequent 
+	trials of the script. The order is important in this script so this module is used to preserve 
+	the order of the elements at each running.
+
+SUBROUTINES:
+
+KRUSKAL:
+	This is the main algorithm.
+	PSEUDOCODE:
+		KRUSKAL(G):
+		1 A = ∅
+		2 foreach v ∈ G.V:
+		3    MAKE-SET(v)
+		4 foreach (u, v) in G.E ordered by weight(u, v), increasing:
+		5    if FIND-SET(u) ≠ FIND-SET(v):
+		6       A = A ∪ {(u, v)}
+		7       UNION(u, v)
+		8 return A
+
+	WORDS:
+    create a graph F (a set of trees), where each vertex in the graph is a separate tree
+    create a set S containing all the edges in the graph
+    while S is nonempty and F is not yet spanning
+        remove an edge with minimum weight from S
+        if the removed edge connects two different trees then add it to the forest F, combining two trees into a single tree
+
+	
+	At the termination of the algorithm, the forest forms a minimum spanning forest of the graph. If the graph is connected, the forest has a single component and forms a minimum spanning tree
+
+ACYCLICCHECK -> ACYCLIC:
+	This is how we check if the resulting graph from the Kruskal algorithm is a tree.
+	It arranges the edge set of our graph into a unique list of strings denoting the edges(this avoids the repition of edges noted above) in a way that allows us to check that the graph is a tree. and returns true or false based on ACYCLIC().
+
+	ACYCLIC:
+		We actually perform the steps need for ACYCLICCHECK	 here to collect information on the connected components of the graph. Then we check that each connected component has (n-1) edges where n is the number of vertices in the connected component. This ensures the graph is a tree. This is accomplished through a depth-first search.
+
+DFS - (Depth-First Search):
+	Have implemented a recursive version of this algorithm. But code is unsatisfactory and incomplete.
+
+	ACTUAL CODE:
+	sub DFS{
+			foreach my $e (@edge_set){
+				my @edge = split(//, $e);
+				if($discovered[$index] eq $edge[0]){
+					my $edge = $edge[1];
+					if ( grep( /^$edge$/, @discovered ) ) {
+						push @connected_component, $e;
+					}
+					else{
+						push @discovered, $edge;
+						push @connected_component, $e;
+					}	
+				}
+			}
+			$index = $index + 1;
+			$start = $discovered[$index];
+			if($index < scalar @vertices + 1){
+				return DFS();
+			}
+		}
+
+		PSEUDOCODE:
+		Input: A graph G and a vertex v of G
+		Output: All vertices reachable from v labeled as discovered
+
+		1  procedure DFS(G,v):
+		2      label v as discovered
+		3      for all edges from v to w in G.adjacentEdges(v) do
+		4          if vertex w is not labeled as discovered then
+		5              recursively call DFS(G,w)
+
