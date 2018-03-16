@@ -1,11 +1,13 @@
+use strict;
+
 my @edge_set = ('AB','AC', 'EF');
 my @vertices = ('A', 'B', 'C', 'D', 'E', 'F');
 
 my @discovered = ('A');
 
-$index = 0;
-$start = 'A';
-@connected_component = ();
+my $index = 0;
+my $start = 'A';
+my @connected_component = ();
 sub DFS{
 =begin comment
 	  procedure DFS(G,v):
@@ -18,7 +20,7 @@ sub DFS{
 	foreach my $e (@edge_set){
 		my @edge = split(//, $e);
 		if($discovered[$index] eq $edge[0]){
-			$edge = $edge[1];
+			my $edge = $edge[1];
 			#print $edge;
 			if ( grep( /^$edge$/, @discovered ) ) {
 				push @connected_component, $e;
@@ -38,14 +40,14 @@ sub DFS{
 	}
 }
 DFS();
-foreach $i (@discovered){
+foreach my $i (@discovered){
 	print $i, "\n";
 }
 
-foreach $c (@connected_component){
+foreach my $c (@connected_component){
 	print $c, "\n";
 }
-if(scalar @discovered == scalar @connected_component - 1){
+if(scalar @discovered > scalar @connected_component){
 	print "Acyclic";
 }
 else{
