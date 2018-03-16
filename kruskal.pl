@@ -81,6 +81,7 @@ sub acyclic {
 	my @uniq_edgeset = uniq(@edge_set);
 	my @vertices = @V;
 	my $index = 0;
+
 	sub DFS{
 		my @discovered = ($vertices[$index]);
 		my @components = ();

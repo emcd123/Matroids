@@ -15,7 +15,7 @@ my $temp_edge = 'AB';
 sub MatchVertexEdge{
 	my $ver_edge = $temp_edge;
 	my @edge_components = split(//, $ver_edge);
-	print @edge_components;
+	#print @edge_components;
 	foreach my $vertex (@edge_components){
 		push @{$FOREST{$vertex}}, 
 	}
