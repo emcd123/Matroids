@@ -64,8 +64,8 @@ sub Kruskal{
 	}
 	
 	if(AcyclicCheck() == 0){
-		print "This Graph is Acyclic";
-		return Dumper(\%FOREST);
+			print Dumper(\%FOREST);
+	    return "This Graph is Acyclic \n";
 	}
 	else{
 		Kruskal();

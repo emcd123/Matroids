@@ -1,0 +1,228 @@
+
+\documentclass{beamer}
+ 
+\usepackage[utf8]{inputenc}
+\usepackage{tikz,graphicx}
+\newcommand\Algorithm{%
+  \textbf{Algorithm:}\\%
+}
+\newcommand\Notation{%
+  \textbf{Notation}\\%
+}
+ 
+\usetheme{Szeged}
+\usecolortheme{seahorse}
+ 
+\newenvironment<>{examplesecond}[1]{%
+  \setbeamercolor{block title}{fg=white,bg=white!100!black}%
+  \begin{block}#2{#1}}{\end{block}} 
+ 
+%Information to be included in the title page:
+\title[Matroids] %optional
+{Matroids for solving Optimisation Problems}
+ 
+\subtitle{The Greedy algorithm as a solution}
+
+\author{emcd123}
+\institute{NUI Galway}
+\date{2018}
+ 
+\begin{document}
+ 
+\frame{\titlepage}
+ 
+\begin{frame}
+\frametitle{The Problem}
+\begin{minipage}{.1\textwidth}
+\begin{tikzpicture}
+    \tikzstyle{every node}=[draw,shape=circle];
+    \node (A) at (1*60:2) {$B$};
+    \node (B) at (2*60:2) {$A$};
+    \node (D) at (4*60:2) {$C$};
+    \node (E) at (5*60:2) {$D$};
+    \draw (B) -- (D)
+          (B) -- (A)
+          (A) -- (E)
+          (B) -- (E)
+          (A) -- (D)
+          (D) -- (E);
+\end{tikzpicture}
+\end{minipage}
+\hspace{2.5cm} \begin{minipage}{.55\textwidth}
+\begin{block}{The Setup}
+Let $G$ be a connected graph, where each vertex is a town.\\
+\noindent A cost is assigned to each edge corresponding to the cost of providing a rail link between the towns.
+\end{block}
+\begin{block}{The Statement}
+\noindent Our problem corresponds to finding the minimum cost of providing a railway that will link all $n$ towns.\\
+\noindent Which in this case corresponds to finding a minimal weighted spanning tree of $G.$
+\end{block}
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Greedy Algorithm}
+Kruskal's algorithm is a greedy algorithm that finds a minimum spanning tree for a connected weighted Graph.
+
+\vspace{4mm}
+
+\begin{block}{Algorithm}
+$1)$ Create a graph $F$ containing just the vertices of $G.$\\
+$2)$ Create a set $S = E(G)$; the edge set of $G.$ \\
+$3)$ While $S$ is non-empty and $F$ is not yet spanning\\
+\hspace{5mm} $3(a)$ Remove an edge with minimum weight from S.\\
+\hspace{5mm} $3(b)$ If the removed edge introduces no cycles to $F$\\
+\hspace{5mm} then add the edge to $F$\\
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Why Greedy works?}
+
+Let $B_G$ be a spanning tree created through the greedy algorithm.
+\begin{lemma}
+If $(E,\mathcal{I})$ is a matroid $M,$ then $B_G$ is a solution to the optimization problem.
+\end{lemma}
+
+\vspace{3mm}
+\begin{block}{Question}
+
+But what is a matroid?
+
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Independence Systems and Matroids}
+\begin{definition}
+An \textit{independence system} is a pair $(E,\mathcal{S}),$ where $E$ is a set and $\mathcal{S}$ is a non-empty subset of the power set of $E$, closed under inclusion. The elements of $\mathcal{S}$ are called the \textit{independent sets}.
+\end{definition}
+\begin{definition}
+A matroid is a pair $(E,\mathcal{I})$ with finite ground set E and $\mathcal{I}$ being a collection of independent subsets of E satisfying the conditions of an independence system with the following extra condition:
+
+\vspace{2mm}
+
+ \noindent (I3): If $ A $ and $ B $ are two independent sets in $\mathcal{I}$ and $|A|=|B|+1$, then there exists $ x \in A \setminus B $ such that $ B \cup \{ x \} $ is in $\mathcal{I}$
+\end{definition}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Bases of a Matroid}
+ 
+\begin{definition}
+A base is a maximally independent subset of $\mathcal{I}.$\\
+\noindent All the maximally independent sets have the same cardinality, this is the \textit{rank} of the matroid.
+\end{definition}
+\begin{definition}
+  Let $\mathcal{B}$ be a set of subsets of a finite set E. Then $\mathcal{B}$ is the collection of bases of a matroid on E if and only if $\mathcal{B}$ satisfies the following conditions:\\
+ (B1) $\mathcal{B}$ is non-empty.\\
+ (B2) If $B_1$ and $B_2$ are members of $\mathcal{B}$ and $x \in B_1 \setminus B_2$, then there is an element $y$ of $B_1 \setminus B_2$ such that $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$.
+ \end{definition}
+\end{frame}
+
+\begin{frame}
+\frametitle{Spanning trees are Bases}
+\begin{definition}
+A spanning tree $T$ of an undirected graph $G$ is a subgraph that is a \textit{tree} which includes all of the vertices of $G.$
+\end{definition}
+
+\hspace{1cm} \begin{minipage}{.2\textwidth}
+ \begin{tikzpicture}
+    \tikzstyle{every node}=[draw,shape=circle];
+    \node (A) at (1*70:2) {$B$};
+    \node (B) at (2*70:1) {$A$};
+    \node (D) at (4*70:1) {$C$};
+    \node (E) at (5*70:2) {$D$};
+    \draw (B) -- (D)[blue];
+    \draw (B) -- (A)[blue];
+    \draw (A) -- (E);
+    \draw (B) -- (E)[blue];
+    \draw (A) -- (D)
+          (D) -- (E);
+  \end{tikzpicture}  
+ \end{minipage}
+\hspace{2cm} \begin{minipage}{.2\textwidth}
+ \begin{tikzpicture}
+    \tikzstyle{every node}=[draw,shape=circle];
+    \node (A) at (1*80:2) {$B$};
+    \node (B) at (2*80:1) {$A$};
+    \node (D) at (4*80:1) {$C$};
+    \node (E) at (5*80:2) {$D$};
+    \draw (B) -- (D)[red];
+	\draw (B) -- (A)[red];
+    \draw (A) -- (E)[red];
+    \draw (B) -- (E)
+          (A) -- (D)
+          (D) -- (E);
+\end{tikzpicture}  
+ \end{minipage}
+
+
+We see that $\mathcal{B}$ (the collection of maximal elements of $\mathcal{I}$) corresponds to the set of spanning trees of the graph.
+\end{frame}
+
+\begin{frame}
+\frametitle{Weight Function}
+The optimization problem associated with $(E,\mathcal{S)}$ is the following: for a given weight function $\omega : E \rightarrow \mathbb{R^{+}}$, we want to find an independent set $A$ whose weight is maximal, where
+\begin{equation}
+\omega(A) := \sum_{e \in A} \omega (e)
+\end{equation}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Demonstration of Kruskal's algorithm}
+\begin{minipage}{.5\textwidth}
+\includegraphics[scale=0.45]{kruskal1}
+\end{minipage}
+\hspace{5mm} \begin{minipage}{.4\textwidth}
+\begin{tikzpicture}
+    \tikzstyle{every node}=[draw,shape=circle];
+    \node (A) at (1*60:3) {$B$};
+    \node (B) at (2*60:2) {$A$};
+    \node (D) at (4*60:2) {$C$};
+    \node (E) at (5*65:2) {$D$};
+    \draw (B) -- (E) node [midway, fill=white] {2};
+	\draw (B) -- (A) node [midway, fill=white] {6};
+    \draw (D) -- (B) node [midway, fill=white] {4};
+\end{tikzpicture}
+
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Why Greedy works: The solution}
+Let $B_G$ be a base of a matroid generated by the greedy algorithm.
+\begin{lemma}
+If $(E,\mathcal{I})$ is a matroid $M,$ then $B_G$ is a solution to the optimization problem.
+\end{lemma}
+\begin{proof}
+If $r(M) = r,$ then $B_G = \{e_1,e_2, ..., e_r\}$ is a basis of $M.$ Let $B$ be another basis of $M$, $B = \{f_1, f_2, ..., f_r\}$
+where $\omega(f_1) \geq \omega(f_2) \geq ... \geq \omega(f_r).$ We claim that $\omega(e_j) \geq \omega(f_f)$ $ \forall j$ , then it follows that $\omega(B_G) \geq \omega(B)$ for any other basis in $\mathcal{B}.$
+\end{proof}
+\end{frame}
+
+\begin{frame}
+\frametitle{Continued}
+\begin{lemma}
+if $1 \leq j \leq r,$ then $\omega(e_j) \geq \omega(f_j).$
+\end{lemma}
+\begin{proof}
+Suppose(seeking a contradiction) that $k$ is the least integer for which $\omega(e_k) \leq \omega(f_k).$ Take $I_1 = \{e_1, e_2, ..., e_{k-1}\}$ and $I_2 = \{f_1, f_2, ..., f_{k-1}\}.$ Since $|I_2| = |I_1|+1$  $(I3)$ implies $I_1 \cup \{f_t\} \in \mathcal{I}$ for some $f_t \in I_2 \setminus I_1.$ But this means that $\omega(f_t) \geq \omega(f_k) > \omega(e_k).$ Hence the Greedy algorithm would have chosen $f_t$ over $e_k$, which gives us our contradiction.
+\end{proof}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Wrap Up}
+
+The combination of the previous lemma and our use of the greedy algorithm to find a maximal member $B$ of $\mathcal{I}$ of maximum weight allows us to deduce that Kruskal's algorithm does generate a minimum weight spanning tree of a graph. \\We have seen that the greedy algorithm gives us a solution to our optimisation problem as long as we have a matroid. Furthermore, the greedy does not provide a solution if the data does not form a matroid.
+\end{frame}
+
+
+
+\end{document}
