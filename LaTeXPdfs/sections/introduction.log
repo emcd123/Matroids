@@ -1,12 +1,21 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.20)  11 FEB 2018 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.20)  29 MAR 2018 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**graphic_matroid.tex
-(./graphic_matroid.tex
+**introduction.tex
+(./introduction.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+(/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.cls
+Document Class: subfiles 2012/05/23 Federico Garcia
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks14
+\verbatim@line=\toks15
+\verbatim@in@stream=\read1
+)
+Preamble taken from file `../main.tex'
+(../main.tex (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
@@ -25,8 +34,8 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks14
-\inpenc@posthook=\toks15
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
@@ -333,95 +342,27 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/03 v2.15a AMS math features
-\@mathmargin=\skip43
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/02/24 3.9q The Babel package
 
-For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen103
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/02/24 3.9q Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen104
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
-)
-\inf@bad=\count87
-LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count88
-\leftroot@=\count89
-LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count90
-\DOTSCASE@=\count91
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
-\macc@depth=\count92
-\c@MaxMatrixCols=\count93
-\dotsspace@=\muskip10
-\c@parentequation=\count94
-\dspbrk@lvl=\count95
-\tag@help=\toks17
-\row@=\count96
-\column@=\count97
-\maxfields@=\count98
-\andhelp@=\toks18
-\eqnshift@=\dimen106
-\alignsep@=\dimen107
-\tagshift@=\dimen108
-\tagwidth@=\dimen109
-\totwidth@=\dimen110
-\lineht@=\dimen111
-\@envbody=\toks19
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2735.
-LaTeX Info: Redefining \] on input line 2736.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks21
-\thm@bodyfont=\toks22
-\thm@headfont=\toks23
-\thm@notefont=\toks24
-\thm@headpunct=\toks25
-\thm@preskip=\skip46
-\thm@postskip=\skip47
-\thm@headsep=\skip48
-\dth@everypar=\toks26
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
-Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks27
+\KV@toks@=\toks18
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
@@ -443,13 +384,123 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count99
+\Gread@gobject=\count88
 ))
-\Gin@req@height=\dimen112
-\Gin@req@width=\dimen113
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
 )
-\epsfxsize=\dimen114
-\epsfysize=\dimen115
+(/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.sty
+Package: subfiles 2012/05/23 Federico Garcia
+)
+(/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count89
+\c@Blindtext=\count90
+\c@blind@countparstart=\count91
+\blind@countxx=\count92
+\blindtext@numBlindtext=\count93
+\blind@countyy=\count94
+\c@blindlist=\count95
+\c@blindlistlevel=\count96
+\c@blindlist@level=\count97
+\blind@listitem=\count98
+\c@blind@listcount=\count99
+\c@blind@levelcount=\count100
+\blind@mathformula=\count101
+\blind@Mathformula=\count102
+\c@blind@randomcount=\count103
+\c@blind@randommax=\count104
+\c@blind@pangramcount=\count105
+\c@blind@pangrammax=\count106
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen106
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen107
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count107
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count108
+\leftroot@=\count109
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count110
+\DOTSCASE@=\count111
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count112
+\c@MaxMatrixCols=\count113
+\dotsspace@=\muskip10
+\c@parentequation=\count114
+\dspbrk@lvl=\count115
+\tag@help=\toks20
+\row@=\count116
+\column@=\count117
+\maxfields@=\count118
+\andhelp@=\toks21
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks22
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen115
+\epsfysize=\dimen116
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
@@ -515,9 +566,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen116
-\extrarowheight=\dimen117
-\NC@list=\toks28
+\col@sep=\dimen117
+\extrarowheight=\dimen118
+\NC@list=\toks30
 \extratabsurround=\skip52
 \backup@length=\skip53
 )
@@ -525,9 +576,9 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks29
-\pgfutil@tempdima=\dimen118
-\pgfutil@tempdimb=\dimen119
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen119
+\pgfutil@tempdimb=\dimen120
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -546,30 +597,30 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks30
-\pgfkeys@temptoks=\toks31
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
 ex
-\pgfkeys@tmptoks=\toks32
+\pgfkeys@tmptoks=\toks34
 ))
-\pgf@x=\dimen120
-\pgf@y=\dimen121
-\pgf@xa=\dimen122
-\pgf@ya=\dimen123
-\pgf@xb=\dimen124
-\pgf@yb=\dimen125
-\pgf@xc=\dimen126
-\pgf@yc=\dimen127
+\pgf@x=\dimen121
+\pgf@y=\dimen122
+\pgf@xa=\dimen123
+\pgf@ya=\dimen124
+\pgf@xb=\dimen125
+\pgf@yb=\dimen126
+\pgf@xc=\dimen127
+\pgf@yc=\dimen128
 \w@pgf@writea=\write3
-\r@pgf@reada=\read1
-\c@pgf@counta=\count100
-\c@pgf@countb=\count101
-\c@pgf@countc=\count102
-\c@pgf@countd=\count103
-\t@pgf@toka=\toks33
-\t@pgf@tokb=\toks34
-\t@pgf@tokc=\toks35
+\r@pgf@reada=\read2
+\c@pgf@counta=\count119
+\c@pgf@countb=\count120
+\c@pgf@countc=\count121
+\c@pgf@countd=\count122
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -585,8 +636,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count104
-\pgfsyssoftpath@bigbuffer@items=\count105
+\pgfsyssoftpath@smallbuffer@items=\count123
+\pgfsyssoftpath@bigbuffer@items=\count124
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -615,12 +666,12 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen128
-\pgfmath@count=\count106
+\pgfmath@dimen=\dimen129
+\pgfmath@count=\count125
 \pgfmath@box=\box29
-\pgfmath@toks=\toks36
-\pgfmath@stack@operand=\toks37
-\pgfmath@stack@operation=\toks38
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -640,37 +691,37 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count107
+\c@pgfmathroundto@lastzeros=\count126
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen129
-\pgf@picmaxx=\dimen130
-\pgf@picminy=\dimen131
-\pgf@picmaxy=\dimen132
-\pgf@pathminx=\dimen133
-\pgf@pathmaxx=\dimen134
-\pgf@pathminy=\dimen135
-\pgf@pathmaxy=\dimen136
-\pgf@xx=\dimen137
-\pgf@xy=\dimen138
-\pgf@yx=\dimen139
-\pgf@yy=\dimen140
-\pgf@zx=\dimen141
-\pgf@zy=\dimen142
+\pgf@picminx=\dimen130
+\pgf@picmaxx=\dimen131
+\pgf@picminy=\dimen132
+\pgf@picmaxy=\dimen133
+\pgf@pathminx=\dimen134
+\pgf@pathmaxx=\dimen135
+\pgf@pathminy=\dimen136
+\pgf@pathmaxy=\dimen137
+\pgf@xx=\dimen138
+\pgf@xy=\dimen139
+\pgf@yx=\dimen140
+\pgf@yy=\dimen141
+\pgf@zx=\dimen142
+\pgf@zy=\dimen143
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen143
-\pgf@path@lasty=\dimen144
+\pgf@path@lastx=\dimen144
+\pgf@path@lasty=\dimen145
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen145
-\pgf@shorten@start@additional=\dimen146
+\pgf@shorten@end@additional=\dimen146
+\pgf@shorten@start@additional=\dimen147
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
@@ -678,19 +729,19 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box30
 \pgf@hbox=\box31
 \pgf@layerbox@main=\box32
-\pgf@picture@serial@count=\count108
+\pgf@picture@serial@count=\count127
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen147
+\pgflinewidth=\dimen148
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen148
-\pgf@pt@y=\dimen149
-\pgf@pt@temp=\dimen150
+\pgf@pt@x=\dimen149
+\pgf@pt@y=\dimen150
+\pgf@pt@temp=\dimen151
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -706,12 +757,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen151
+\pgfarrowsep=\dimen152
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen152
-\pgf@sys@shading@range@num=\count109
+\pgf@max=\dimen153
+\pgf@sys@shading@range@num=\count128
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -742,8 +793,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen153
-\pgf@nodesepend=\dimen154
+\pgf@nodesepstart=\dimen154
+\pgf@nodesepend=\dimen155
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -757,10 +808,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen155
-\pgffor@skip=\dimen156
-\pgffor@stack=\toks39
-\pgffor@toks=\toks40
+\pgffor@iter=\dimen156
+\pgffor@skip=\dimen157
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
@@ -768,31 +819,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count110
-\pgfplotmarksize=\dimen157
+\pgf@plot@mark@count=\count129
+\pgfplotmarksize=\dimen158
 )
-\tikz@lastx=\dimen158
-\tikz@lasty=\dimen159
-\tikz@lastxsaved=\dimen160
-\tikz@lastysaved=\dimen161
-\tikzleveldistance=\dimen162
-\tikzsiblingdistance=\dimen163
+\tikz@lastx=\dimen159
+\tikz@lasty=\dimen160
+\tikz@lastxsaved=\dimen161
+\tikz@lastysaved=\dimen162
+\tikzleveldistance=\dimen163
+\tikzsiblingdistance=\dimen164
 \tikz@figbox=\box35
 \tikz@figbox@bg=\box36
 \tikz@tempbox=\box37
 \tikz@tempbox@bg=\box38
-\tikztreelevel=\count111
-\tikznumberofchildren=\count112
-\tikznumberofcurrentchild=\count113
-\tikz@fig@count=\count114
+\tikztreelevel=\count130
+\tikznumberofchildren=\count131
+\tikznumberofcurrentchild=\count132
+\tikz@fig@count=\count133
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count115
-\pgfmatrixcurrentcolumn=\count116
-\pgf@matrix@numberofcolumns=\count117
+\pgfmatrixcurrentrow=\count134
+\pgfmatrixcurrentcolumn=\count135
+\pgf@matrix@numberofcolumns=\count136
 )
-\tikz@expandcount=\count118
+\tikz@expandcount=\count137
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -806,7 +857,7 @@ Package: tkz-graph 2011/06/01 ctan v 1.00 base for graphs
 
 (/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 2016/01/11 v2.6 eTeX basic definition package (PEB,DPC)
-\et@xins=\count119
+\et@xins=\count138
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -816,10 +867,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks41
-\XKV@tempa@toks=\toks42
+\XKV@toks=\toks43
+\XKV@tempa@toks=\toks44
 )
-\XKV@depth=\count120
+\XKV@depth=\count139
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
@@ -829,250 +880,139 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen164
+\arrowsize=\dimen165
 ))
-\c@tkz@gr@a=\count121
-\c@tkz@gr@b=\count122
-\c@tkz@gr@c=\count123
-\c@tkz@gr@e=\count124
-\c@tkz@gr@d=\count125
-\c@tkz@gr@p=\count126
-\c@tkz@gr@i=\count127
-\c@tkz@gr@n=\count128
-\c@tkz@gr@ta=\count129
-\c@tkz@gr@tb=\count130
+\c@tkz@gr@a=\count140
+\c@tkz@gr@b=\count141
+\c@tkz@gr@c=\count142
+\c@tkz@gr@e=\count143
+\c@tkz@gr@d=\count144
+\c@tkz@gr@p=\count145
+\c@tkz@gr@i=\count146
+\c@tkz@gr@n=\count147
+\c@tkz@gr@ta=\count148
+\c@tkz@gr@tb=\count149
 ) (/usr/share/texlive/texmf-dist/tex/latex/tkz-berge/tkz-arith.sty
 Package: tkz-arith 2011/02/28 v 1.00 c integers numbers
 
 (/usr/share/texlive/texmf-dist/tex/latex/tkz-base/tkz-tools-arith.tex
 File: tkz-tool-arith.tex tkz-tool-arith 1.161 c
 ))
-\c@tkz@bg@cnt=\count131
-\c@tkza@tmp=\count132
+\c@tkz@bg@cnt=\count150
+\c@tkza@tmp=\count151
 )
-\c@thm=\count133
-\c@defn=\count134
-\c@conj=\count135
-\c@exmp=\count136
-\c@excercise=\count137
-\c@solution=\count138
-\c@Question=\count139
+(/usr/share/texlive/texmf-dist/tex/latex/calrsfs/calrsfs.sty
+\symrsfscript=\mathgroup6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
 
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count152
+\float@exts=\toks45
+\float@box=\box39
+\@float@everytoks=\toks46
+\@floatcapt=\box40
+)
+\@float@every@algorithm=\toks47
+\c@algorithm=\count153
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
 
-! Package xkeyval Error: value `none' is not allowed.
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
-See the xkeyval package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.58 \GraphInit[vstyle = none]
-                              
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count154
+\c@ALG@rem=\count155
+\c@ALG@nested=\count156
+\ALG@tlm=\skip54
+\ALG@thistlm=\skip55
+\c@ALG@Lnr=\count157
+\c@ALG@blocknr=\count158
+\c@ALG@storecount=\count159
+\c@ALG@tmpcounter=\count160
+\ALG@tmplength=\skip56
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+\c@thm=\count161
+\c@defn=\count162
+\c@conj=\count163
+\c@exmp=\count164
+\c@excercise=\count165
+\c@solution=\count166
+\c@Question=\count167
+)) (./introduction.aux)
+\openout1 = `introduction.aux'.
 
-(./graphic_matroid.aux)
-\openout1 = `graphic_matroid.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count140
-\scratchdimen=\dimen165
-\scratchbox=\box39
-\nofMPsegments=\count141
-\nofMParguments=\count142
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count143
-\MPscratchDim=\dimen166
-\MPnumerator=\count144
-\makeMPintoPDFobject=\count145
-\everyMPtoPDFconversion=\toks44
+\scratchcounter=\count168
+\scratchdimen=\dimen166
+\scratchbox=\box41
+\nofMPsegments=\count169
+\nofMParguments=\count170
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count171
+\MPscratchDim=\dimen167
+\MPnumerator=\count172
+\makeMPintoPDFobject=\count173
+\everyMPtoPDFconversion=\toks49
 ) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 69.
+LaTeX Font Info:    Try loading font information for U+msa on input line 8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 69.
+LaTeX Font Info:    Try loading font information for U+msb on input line 8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-! Undefined control sequence.
-\tikz@textfont ->\itseries 
-                           
-l.116   \Vertex{1}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Font Info:    Try loading font information for OMS+rsfs on input line 8.
 
-! Undefined control sequence.
-\tikz@textfont ->\itseries 
-                           
-l.117   \SOWE(1){2}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+(/usr/share/texlive/texmf-dist/tex/latex/calrsfs/OMSrsfs.fd) [1
 
-! Undefined control sequence.
-\tikz@textfont ->\itseries 
-                           
-l.118   \SOEA(1){3}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (64.67189pt too wide) in paragraph at lines 122--123
-[][] 
- []
-
-
-! Package pgfkeys Error: I do not know the key '/tikz/height', to which you pas
-sed '1cm', and I am going to ignore it. Perhaps you misspelled it.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.125  \begin{tikzpicture}[height = 1cm]
-                                        
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-! Undefined control sequence.
-\tikz@textfont ->\itseries 
-                           
-l.127   \Vertex{1}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikz@textfont ->\itseries 
-                           
-l.128   \SOEA(1){2}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikz@textfont ->\itseries 
-                           
-l.129   \SOWE(2){3}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikz@textfont ->\itseries 
-                           
-l.130   \WE(3){4}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikz@textfont ->\itseries 
-                           
-l.131   \NOWE(4){5}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikz@textfont ->\itseries 
-                           
-l.137   \NOWE(1){A1}
-                    
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikz@textfont ->\itseries 
-                           
-l.138   \NOWE(5){A2}
-                    
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (124.51265pt too wide) in paragraph at lines 141--142
-[][] 
- []
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-(./graphic_matroid.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction.aux) ) 
 Here is how much of TeX's memory you used:
- 14526 strings out of 494910
- 279135 string characters out of 6179835
- 333255 words of memory out of 5000000
- 17510 multiletter control sequences out of 15000+600000
- 12789 words of font info for 50 fonts, out of 8000000 for 9000
+ 15590 strings out of 494910
+ 294047 string characters out of 6179835
+ 355929 words of memory out of 5000000
+ 18526 multiletter control sequences out of 15000+600000
+ 7093 words of font info for 29 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,8n,67p,418b,931s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/symbols/msam10.pfb>
-Output written on graphic_matroid.pdf (2 pages, 131512 bytes).
+ 64i,8n,61p,439b,142s stack positions out of 5000i,500n,10000p,200000b,80000s
+</us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/r
+sfs10.pfb>
+Output written on introduction.pdf (1 page, 91219 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 47 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

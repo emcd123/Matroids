@@ -1,17 +1,112 @@
+
 \documentclass{article}
+
 \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\graphicspath{{images/}{../images/}}
+\usepackage{subfiles}
+\usepackage{blindtext}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array, tikz,tkz-berge,  calrsfs}
+\usepackage{tkz-graph}
+\usepackage{algorithm, float}
+\usepackage[noend]{algpseudocode}
+%Includes "References" in the table of contents
+\usepackage[nottoc]{tocbibind}
+ 
+\title{Matroids And their Graphs}
+\author{o.mcdonnell4@nuigalway.ie }
+\date{April 2018}
 
-\title{Matroids}
-\author{o.mcdonnell4 }
-\date{December 2017}
-
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+\newenvironment{rcases}
+  {\left.\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+\newcounter{excercise}
+\newcounter{solution}
+\newcounter{Question}
+\newcommand\Excercise{%
+  \textbf{Excercise:}~%
+  \setcounter{solution}{0}%
+}
+\newcommand\Problem{%
+  \textbf{Problem:}~%
+}
+\newcommand\TheSolution{%
+  \textbf{Solution:}\\%
+}
+\newcommand\Question{%
+    \textbf{Question:}~%
+    \setcounter{Question}{0}%
+}
+\newcommand\Notation{%
+  \textbf{Notation:}~%
+}
+\newcommand\Proof{%
+    \textbf{Proof:}~%
+}
+\GraphInit[vstyle = Shade]
+\tikzset{
+  LabelStyle/.style = { rectangle, rounded corners, draw, minimum height = 2em,
+                        minimum width = 2em, fill = white!50,
+                        text = red, font = \Large\bfseries },
+  VertexStyle/.append style = { inner sep=4pt,
+                                font = \bfseries},
+  EdgeStyle/.append style = { } }
+\thispagestyle{empty}
+ 
+\usepackage{biblatex}
+\addbibresource{matroid_bib.bib}
+ 
 \begin{document}
-
+ 
 \maketitle
+ 
+\subfile{sections/abstract}
 
-\section{Excercise 2.14}
-Let G be a graph
-and $ E = \{ 1,2, ..., n \}$ be the edge set of G
+\section{Introduction}
+\subfile{sections/introduction}
+\subfile{sections/intro2}
+\subfile{sections/intro3}
+\subfile{sections/intro4}
 
-\mathbb
+\section{Cryptomorphisms}
+\subfile{sections/char1}
+\subfile{sections/char12}
+\subfile{sections/char2}
+\subfile{sections/char21}
+
+\section{Graph Theory}
+\subfile{sections/g1}
+
+\section{Algorithms}
+\subfile{sections/algo1}
+\subfile{sections/algo2}
+\subfile{sections/algo3}
+
+\section{Optimization Problems}
+\subfile{sections/opt1}
+\subfile{sections/opt3}
+\subfile{sections/opt2}
+
+\section{Other Optimizable set-systems}
+\subfile{sections/gre1}
+
+\printbibliography[
+heading=bibintoc,
+title={Whole bibliography}
+] %Prints the entire bibliography with the titel "Whole bibliography"
+
 \end{document}
+

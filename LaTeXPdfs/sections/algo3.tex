@@ -1,0 +1,36 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\subsection{Depth-first Search}
+\begin{algorithm}[H]
+\caption{DFS}\label{dfs}
+Let $G$ be a graph with vertex set $V = \{1,...,n\}$
+\begin{algorithmic}[1]
+\Procedure{DFS}{$G,V$}
+\State label $v$ as discovered
+\ForAll{edges from $v$ to $w$ \textbf{in} $G.$adjacentEdges$(V)$}
+	\If{(vertex w is not labelled as discovered)}
+	 	\State recursively call DFS$(G,w)$
+	\EndIf
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\noindent This algorithm allows you to find the connected components of a disconnected graph. Then using the following algorithm we can check if our forest at each step of our algorithm is acyclic.
+
+\begin{algorithm}[H]
+\caption{Acyclic Check}\label{acyclic}
+Let $G$ be a graph with the set of connected componenets $C$ as found by DFS(G,v) where v is an arbitrary vertex in G.
+\begin{algorithmic}[1]
+\Procedure{ACYCLIC}{$G,C$}
+\ForAll{$i$ \textbf{in} $C$} 
+	\If{$i.$edgeCount() $> n-1$}
+		\Return False
+	\EndIf
+\EndFor
+	\Return True
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\end{document}

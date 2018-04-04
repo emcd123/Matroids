@@ -1,0 +1,53 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\subsection{Circuit characterization of a matroid}
+
+\begin{defn} By using (I1)–(I3) , it is not difficult to show that the collection $\mathcal{C}$ of circuits of a matroid M has the following three properties:\\
+(C1) The empty set is not in $\mathcal{C}$\\
+(C2) No member of $\mathcal{C}$ is a proper subset of another member of $\mathcal{C}$\\
+(C3) if $ C_1 $ and $ C_2 $ are distinct members of $ C $ and 
+$ e \in C_1 \cap C_2 $, then $ (C_1 \cup C_2 ) \setminus \{e\} $ contains a member of $\mathcal{C}$ 
+ \end{defn}
+ 
+ \vspace{5mm}
+ 
+ \begin{thm}
+ Let M be a matroid and $\mathcal{C}$ be its collection of circuits. Then $\mathcal{C}$ satisfies (C1) - (C3)
+  \end{thm}
+ 
+ \noindent\textbf\Proof \\
+ \noindent (C1) is obvious as by $I1$ the empty set must always be an independent set.
+ 
+ \vspace{2mm}
+ 
+ \noindent (C2) is also straightforward because any $ C \in \mathcal{C} $ is a minimally independent set by definition. Therefore , if there exists a $ C_1 \in \mathcal{C} $ such that $ C_1 \subset C $ then $ C_1 \in \mathcal{C} $ and $ C $ is not a minimally dependent subset of E. 
+ 
+ \vspace{2mm}
+ 
+ \noindent (C3) Let $ A, B \in \mathcal{C} $ and suppose that(Seeking a contradiction) $ (A \cup B) \setminus \{e\} $ where $ e $ is $ \in (A \cap B) $ does not contain a circuit.\\
+ \noindent Then $ (A \cup B) \setminus \{e\} $ is independent and therefore in $\mathcal{I}$
+ 
+ \vspace{2mm}
+ 
+\noindent The set $ A \setminus B $ is non-empty.\\
+ Let $ s \in A \setminus B    \implies s \in A$\\
+ \noindent as $A$ is in $\mathcal{C}$ it is minimally dependent.
+ \noindent $\implies A \setminus \{s\} \in \mathcal{I}$ i.e is independent.
+ 
+ \vspace{2mm}
+ 
+\noindent Let $J$ be a maximal independent set of $(A \cup B)$ with the following properties: $S \setminus \{s\} \subset J $ and therefore $ \{s\} \notin J $ but as B is a circuit there must be some element $t \in B$ that is not in $J$. $s$ and $t$ are distinct.
+ 
+ \vspace{2mm}
+ 
+\noindent $\implies |J| $ must be at most equal to $|(A \cup B) \setminus \{s,t\}| $\\
+ $\implies |J| \leq |(A \cup B) \setminus \{s,t\}| = |(A \cup B)| - 2 < |(A \cup B) \setminus \{e\}|$
+ 
+ \vspace{2mm} 
+ 
+ \noindent Now by (I3) we can subsitute elements from $|(A \cup B) \setminus \{e\}|$ into $|(A \cup B) \setminus \{s,t\}|$ that are not in $|(A \cup B) \setminus \{s,t\}|$ but the only elements that fits this condition are $\{s,t\}$ and introducing either of these elements breaks the independence of $J$.
+ 
+\noindent Therefore, $|(A \cup B) \setminus \{e\}|$ must contain a circuit\\
+ \qed
+ 
+\end{document}

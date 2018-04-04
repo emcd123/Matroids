@@ -1,0 +1,40 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\subsection{Greedy Algorithm}
+\begin{algorithm}[H]
+\caption{Greedy algorithm}\label{greedy}
+Let $(E,\mathcal{S})$ be an independence system and $\omega:E \longrightarrow \mathbb{R^+}$
+\begin{algorithmic}[1]
+\Procedure{GREEDY}{$E, \mathcal{S}, \omega,T$}
+\State order the elements of $E$ according to their weight
+\State $E = \{ e_1,...,e_m\}$ with $\omega(e_1) \geq \omega(e_2) \geq ... \geq \omega(e_m)$
+\State $T\gets \emptyset$
+\For{$k=1$ to $m$}
+	\If{$T \cup \{e_k\} \in \mathcal{S}$}
+	 	\State append $e_k$ to $T$
+	\EndIf
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{Greedy algorithm}\label{matroid_ver}
+The \textit{greedy algorithm} for the pair $(\mathcal{I}, \omega)$ is as follows:
+\begin{algorithmic}[1]
+\Procedure{GREEDY}{$\mathcal{I}, \omega$}
+\State Set $x_0 = \emptyset$ and $j=0$
+\If{$\exists e \in E \setminus x_j$ such that $x \cup \{e\} \in \mathcal{I}$}
+\State Choose such an element $e_{j+1}$ of maximum weight,
+\State let $x_{j+1} = x_j \cup \{e_{j+1}\}$ and \textbf{Break}
+\Else 
+\State Let $x_j = B_G$
+\State\Return $x_j$
+\EndIf
+\State $j++$
+
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\end{document}

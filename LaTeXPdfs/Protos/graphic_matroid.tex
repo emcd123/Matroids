@@ -1,84 +1,7 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+\documentclass[../main.tex]{subfiles}
 
-\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array, tikz,tkz-berge}
-\usepackage{tkz-graph}
-
-\title{Matroids And their Graphs}
-\author{o.mcdonnell4@nuigalway.ie }
-\date{19 January 2018}
-
-
-\theoremstyle{plain}
-\newtheorem{thm}{Theorem}[section]
-\newtheorem{lem}[thm]{Lemma}
-\newtheorem{prop}[thm]{Proposition}
-\newtheorem*{cor}{Corollary}
-
-\theoremstyle{definition}
-\newtheorem{defn}{Definition}[section]
-\newtheorem{conj}{Conjecture}[section]
-\newtheorem{exmp}{Example}[section]
-
-\theoremstyle{remark}
-\newtheorem*{rem}{Remark}
-\newtheorem*{note}{Note}
-
-\newenvironment{rcases}
-  {\left.\begin{aligned}}
-  {\end{aligned}\right\rbrace}
-
-\newcounter{excercise}
-\newcounter{solution}
-\newcounter{Question}
-
-\newcommand\Excercise{%
-  \textbf{Excercise:}~%
-  \setcounter{solution}{0}%
-}
-
-\newcommand\TheSolution{%
-  \textbf{Solution:}\\%
-}
-
-\newcommand\Question{%
-    \textbf{Question:}~%
-    \setcounter{Question}{0}%
-}
-\newcommand\Notation{%
-  \textbf{Notation:}~%
-}
-
-\newcommand\Proof{%
-    \textbf{Proof:}~%
-}
-
-\setlength{\droptitle}{-10em}
-
-\GraphInit[vstyle = none]
-\tikzset{
-  LabelStyle/.style = { rectangle, rounded corners, draw, minimum height = 2em,
-                        minimum width = 2em, fill = white!50,
-                        text = red, font = \Large\bfseries },
-  VertexStyle/.append style = { inner sep=4pt,
-                                font = \itseries},
-  EdgeStyle/.append style = { } }
-\thispagestyle{empty}
 
 \begin{document}
-\maketitle
- 
- \section{Graphic Matroids}
- 
- \noindent\Question \textbf{1}
- Why is G not a matroid(graphical hint?)?
- 
- \vspace{2mm}
- 
- \noindent\Question \textbf{1}
- Is P(E) a graphic matroid(Where P(E) is the power set of he ground set E)?
- 
- \vspace{5mm}
  
  \noindent Let $G$ be a graph and $I$ be the set of all cyclefree subgraphs of G\\
  Let $ A ,B  \in  I $ with $ |A|  =  |B|  + 1 $
@@ -118,11 +41,11 @@
   \SOEA(1){3}
   \Edge[label = $a_i$](1)(2)
   \Edge[label = $b_{i,j}$](1)(3)
-  \Edge[label = $b_{i,j}$](2)(3)
+  \Edge[label = $b_{i,j}$](1)(3)
 \end{tikzpicture}  
  \end{minipage}
 \hspace{4cm} \begin{minipage}{.2\textwidth}
- \begin{tikzpicture}[height = 1cm]
+ \begin{tikzpicture}
   \SetGraphUnit{1.5}
   \Vertex{1}
   \SOEA(1){2}

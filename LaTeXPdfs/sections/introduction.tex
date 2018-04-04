@@ -1,0 +1,51 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Matroid}
+
+\begin{defn}
+An \textit{independence system} is a pair $(E,\mathcal{S}),$ where $E$ is a set and $\mathcal{S}$ is a collection of sets satisfying:\\
+\noindent (I1) $\mathcal{S}$ is non-empty.\\
+\noindent (I2) $\mathcal{S}$ is a  hereditary subset of the power set of $E$.\\
+\noindent The elements of $\mathcal{S}$ are called the \textit{independent sets}.
+\end{defn}
+
+\begin{defn}
+A matroid is a pair $(E,\mathcal{I})$ with finite ground set E and $\mathcal{I}$ being a collection of independent subsets of E satisfying the following conditions:
+
+\vspace{2mm}
+
+\noindent (I1): The empty set is always independent\\
+\noindent (I2): Every subset of an independent set is independent\\
+\noindent (I3): If $ A $ and $ B $ are two independent sets of $\mathcal{I}$ and $|A|>|B|$, then there exists $x \in A \setminus B$ such that $B \cup \{ x \}$ is in $\mathcal{I}$
+\end{defn}
+
+\begin{lem}
+Prove that $(E,\mathcal{I})$ is a matroid if and only if $\mathcal{I}$ satisfies $(I2)$ and the following two conditions:\\
+\noindent $(I1)' \mathcal{I} \neq \emptyset$\\
+\noindent $(I3)'$ If $I_1,I_2$ are in $\mathcal{I}$ and $|I_2|=|I_1|+1$, then there is an element $e \in I_2 \setminus I_1$ such that $I_1 \cup \{e\} \in \mathcal{I}$
+\end{lem}
+\begin{proof}
+Suppose $(E,\mathcal{I})$ is a matroid. Then by hypothesis, $\mathcal{I}$ satisies $(I2).$\\
+\noindent By $(I1)$ the empty set is laways contained in $\mathcal{I}$, so $\mathcal{I}$ is always non-empty.\\
+\noindent $\implies (I1)'$ holds.\\
+\noindent Let $I_1,I_2 \in \mathcal{I}$ and $|I_2|>|I_1|$ then by $(I3)$ there exists $e \in I_2 \setminus I_1$ such that $I_1 \cup \{e\} \in \mathcal{I}$ by $(I3).$\\
+\noindent But by $(I2)$ there is an $I_2'$ such that $e \in I_2'$ and $|I_2'|=|I_1|+1$ as a matorid is hereditary and $I_2' \subset I_2.$
+$\implies \exists e \in I_2' \setminus I_1$ such that $I_1 \cup \{e\} \in \mathcal{I}.$\\
+Conversely, Suppose $\mathcal{I}$ satisfies $(I2),(I1)',(I3)'$\\
+\noindent By (I1)', $\mathcal{I}$ is always non-empty. (I2) and (I3) hold by hypothesis.
+\end{proof}
+
+\begin{exmp}
+Let $M_1, M_2$ be matroids on a set $E.$ Let $E=\{1,2,3,4\}$\\
+\noindent Let $\mathcal{I}_1 = \{\emptyset, \{1\},\{2\},\{3\},\{4\},\{1,2\},\{1,3\},\{2,4\},\{3,4\}\}$\\
+\noindent Let $\mathcal{I}_2 = \{\emptyset, \{1\},\{2\},\{3\},\{4\},\{1,2\},\{1,4\},\{2,3\},\{3,4\}\}$\\
+let $(E, \mathcal{I}_1 \cap \mathcal{I}_2)$ be a pair, is it a matroid?\\
+Let $I_1 = \{1,2\}$ and $I_2=\{3\}$\\
+If $\exists e \in I_1$ such that $I_2 \cup \{e\} \in \mathcal{I}$ then we have a matroid.\\
+$I_2 \cup \{1\} = \{1,3\} \notin \mathcal{I}$,\\
+$I_2 \cup \{2\} = \{2,3\} \notin \mathcal{I}$\\
+\noindent $\implies (E, \mathcal{I}_1 \cap \mathcal{I}_2)$ is not a matroid.
+\end{exmp}
+\end{document}

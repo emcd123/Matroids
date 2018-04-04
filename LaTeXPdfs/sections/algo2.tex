@@ -1,0 +1,28 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\subsection{Kruskal's Algorithm}
+\begin{algorithm}[H]
+\caption{Kruskal's algorithm}\label{kruskal}
+Let $G$ be a connected graph with vertex set $V = \{1,...,n\}$ and $\omega:E \longrightarrow \mathbb{R^+}$ a weight function. The edges of $G$ are ordered according to their weight, that is, $E = \{e_1,...,e_m\}$ and $\omega(e_1) \leq ... \leq \omega(e_m).$
+\begin{algorithmic}[1]
+\Procedure{KRUSKAL}{$G,\omega,T$}
+\State $T\gets \emptyset$
+\For{$k=1$ to $m$}
+	\If{ACYCLIC($T \cup \{e_k\}$)}
+	 	\State append $e_k$ to $T$
+	\EndIf
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+$1)$ Create a graph $F$ containing just the vertices of $G.$\\
+$2)$ Create a set $S = E(G)$; the edge set of $G.$ \\
+$3)$ While $S$ is non-empty and $F$ is not yet spanning\\
+\hspace{5mm} $3(a)$ Remove an edge with minimum weight from S.\\
+\hspace{5mm} $3(b)$ If the removed edge introduces no cycles to $F$\\
+\hspace{5mm} then add the edge to $F$\\
+\end{algorithm}
+\end{document}

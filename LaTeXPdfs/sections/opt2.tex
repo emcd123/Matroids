@@ -1,0 +1,48 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\begin{thm}
+Let $\mathcal{I}$ be a collection of subsets of a set $E.$ Then $(E,\mathcal{I})$ is a matroid if and only if $\mathcal{I}$ satisfies the following conditions:\\
+$(I1)$ $\emptyset \in \mathcal{I}$\\
+$(I2)$ If $I \in \mathcal{I}$ and $I' \subset I$ then $I' \in \mathcal{I}$\\
+$(G)$ For all weight functions $\omega:E \longrightarrow \mathbb{R^+},$ the greedy algorithm produces a maximal member of $\mathcal{I}$ of maximum weight.
+\end{thm}
+\begin{proof}
+Suppose $(E,\mathcal{I})$ is a matroid. Then $\emptyset \in \mathcal{I}$ and (I2) holds trivially.
+And by \textit{theorem 5.1} we know that greedy algorithm cna find a maximal $B \in \mathcal{B}$ of maximum weight if $(E,\mathcal{I})$ is a matroid.\\
+Conversely, suppose $(E,\mathcal{I})$ is a pair satisfying $(I1),(I2)$ and $(G).$ Need to prove $\mathcal{I}$ satisfies $(I3)$ in order to have a matroid.\\
+Suppose that (seeking a contradiction), that is $I_1,T_2 \in \mathcal{I}$ with $|I_2|>|I_1|$ such that $I_1 \cup \{e\} \in \mathcal{I}.$\\
+Now, $|I_1 \setminus I_2| < |I_2 \setminus I_1|$ and $I_1 \setminus I_2$ is non-empty.\\
+So we can choose an $\epsilon>0$ such that
+\begin{equation}
+0 < (1+\epsilon)(|I_1 \setminus I_2|) < |I_2 \setminus I_1|
+\end{equation}
+Define $\omega:E \longrightarrow \mathbb{R^+}$ by:
+\[
+\omega(e) = \begin{cases}
+               2 if e \in I_1 \cap I_2 \\
+               \frac{1}{|I_1 \setminus I_2|} if e \in I_1 \setminus I_2\\
+               \frac{1+\epsilon}{|I_2 \setminus I_1|} if e \in I_2 \setminus I_1 \\
+               0, otherwise.
+            \end{cases}
+\]\\
+We need the greedy algorithm to fail for only one weihgt function to get our contradiction.
+\begin{itemize}
+\item The greedy algorithm will choose all the elements of $I_1 \cap I_2$ first as they are the heaviest elements.
+\item Then it will choose all the elements of $I_1 \setminus I_2.$
+\item By assumption, it cannot then pick any element of $I_2 \setminus I_1.$ Thus the remaining elements of $B_G$ will be in $E \setminus (I_1 \cup I_2).$\\
+\end{itemize}
+Hence,\[
+\omega(B_G) = 2|I_1 \cap I_2| + |I_1 \setminus I_2|(\frac{1}{|I_1 \setminus I_2|})\\
+= 2|I_1 \cap I_2| + 1
+\]\\
+But by (I2), $I_2$ is contained in a maximal member $B_2$ of $\mathcal{I}$ and, $I_2 \subset B_2.$\\
+\[
+\omega(B_2) \geq \omega(I_2) = 2|I_1 \cap I_2| + |I_2 \setminus I_1|(\frac{1+\epsilon}{|I_2 \setminus I_1|})\\
+> 2|I_1 \cap I_2| + 1 = \omega(B_G)
+\]\\
+$\implies \omega(B_2) > \omega(B_G)$\\
+Which means the greedy algorithm does not find a solution to our optimisation problem shown by \textit{theorem x.y}, so the greedy algorithm fails for this weight function. We have a contradiction.\\
+$\implies$ (I3) holds.\\
+$\implies (E,\mathcal{I})$ is a matroid.
+\end{proof}
+\end{document}

@@ -21,7 +21,7 @@
 \title[Matroids] %optional
 {Matroids for solving Optimisation Problems}
  
-\subtitle{The Greedy algorithm as a solution}
+\subtitle{Greedy algorithm as a solution}
 
 \author{Owen McDonnell}
 \institute{NUI Galway}
@@ -51,21 +51,24 @@
 \hspace{2.5cm} \begin{minipage}{.55\textwidth}
 \begin{block}{The Setup}
 \begin{itemize}
-\item Let $G$ be a connected graph, where each vertex is a town.\\
-\item \noindent A cost is assigned to each edge
-\item cost of providing a rail link between the towns.
+\item $G$ is a connected graph
+\item Each vertex is a town.
+\item \noindent Cost is assigned to each edge
+\item Corresponds to providing a rail link between the towns.
 \end{itemize}
 \end{block}
 \pause
 \begin{block}{The Statement}
-\noindent Our problem corresponds to finding the minimum cost of providing a railway that will link all $n$ towns.\\
-\noindent Which in this case corresponds to finding a minimal weighted spanning tree of $G.$
+\begin{itemize}
+\item \noindent Finding the minimum cost of a railway linking all $n$ towns.\\
+\item \noindent Corresponds to finding a minimal weighted spanning tree of $G.$
+\end{itemize}
 \end{block}
 \end{minipage}
 \end{frame}
 
 \begin{frame}
-\frametitle{A greedy Algorithm (Kruskal)}
+\frametitle{A Greedy Algorithm (Kruskal)}
 Kruskal's algorithm is a greedy algorithm that finds a minimum spanning tree for a connected weighted Graph.
 
 \vspace{4mm}
@@ -104,11 +107,16 @@ But what is a matroid?
 \begin{frame}
 \frametitle{Independence Systems and Matroids}
 \begin{definition}
-An \textit{independence system} is a pair $(E,\mathcal{S}),$ where $E$ is a set and $\mathcal{S}$ is a non-empty, hereditary subset of the power set of $E$. The elements of $\mathcal{S}$ are called the \textit{independent sets}.
+An \textit{independence system} is a pair $(E,\mathcal{S}),$ where $E$ is a set and $\mathcal{S}$ is a collection of sets satisfying:\\
+\vspace{2mm}
+\pause
+\noindent (I1) $\mathcal{S}$ is non-empty.\\
+\noindent (I2) $\mathcal{S}$ is a  hereditary subset of the power set of $E$.\\
+\noindent The elements of $\mathcal{S}$ are called the \textit{independent sets}.
 \end{definition}
 \pause
 \begin{definition}
-A matroid is a pair $(E,\mathcal{I})$ with finite ground set E and $\mathcal{I}$ being a collection of independent subsets of E satisfying the conditions of an independence system with the following extra condition:
+A matroid is a pair $(E,\mathcal{I})$ with finite ground set E and $\mathcal{I}$ being a collection of independent subsets of E satisfying the above conditions (I1), (I2) with the following extra condition:
 
 \vspace{2mm}
 \pause
@@ -121,13 +129,13 @@ A matroid is a pair $(E,\mathcal{I})$ with finite ground set E and $\mathcal{I}$
 \frametitle{Bases of a Matroid}
  
 \begin{definition}
-A base is a maximally independent subset of $\mathcal{I}.$\\
+A base is a maximal independent subset of $\mathcal{I}.$\\
 \noindent All the maximally independent sets have the same cardinality, this is the \textit{rank} of the matroid.
 \end{definition}
 \begin{definition}
   Let $\mathcal{B}$ be a set of subsets of a finite set E. Then $\mathcal{B}$ is the collection of bases of a matroid on E if and only if $\mathcal{B}$ satisfies the following conditions:\\
  (B1) $\mathcal{B}$ is non-empty.\\
- (B2) If $B_1$ and $B_2$ are members of $\mathcal{B}$ and $x \in B_1 \setminus B_2$, then there is an element $y$ of $B_1 \setminus B_2$ such that $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$.
+ (B2) If $B_1$ and $B_2$ are members of $\mathcal{B}$ and $x \in B_1 \setminus B_2$, then there is an element $y$ of $B_2 \setminus B_1$ such that $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$.
  \end{definition}
 \end{frame}
 
@@ -217,18 +225,24 @@ where $\omega(f_1) \geq \omega(f_2) \geq ... \geq \omega(f_r).$\pause We claim t
 \begin{frame}
 \frametitle{Continued}
 \begin{lemma}
-if $1 \leq j \leq r,$ then $\omega(e_j) \geq \omega(f_j).$
+If $1 \leq j \leq r,$ then $\omega(e_j) \geq \omega(f_j).$
 \end{lemma}
 \begin{proof}
-Suppose(seeking a contradiction) that $k$ is the least integer for which $\omega(e_k) \leq \omega(f_k).$\pause Take $I_1 = \{e_1, e_2, ..., e_{k-1}\}$ and $I_2 = \{f_1, f_2, ..., f_{k}\}.$\pause Since $|I_2| = |I_1|+1$  $(I3)$ implies $I_1 \cup \{f_t\} \in \mathcal{I}$ for some $f_t \in I_2 \setminus I_1.$ \pause But this means that $\omega(f_t) \geq \omega(f_k) > \omega(e_k).$ \pause Hence the Greedy algorithm would have chosen $f_t$ over $e_k$, which gives us our contradiction.
+Suppose (seeking a contradiction) that $k$ is the least integer for which $\omega(e_k) < \omega(f_k).$\pause Take $I_1 = \{e_1, e_2, ..., e_{k-1}\}$ and $I_2 = \{f_1, f_2, ..., f_{k}\}.$\pause Since $|I_2| = |I_1|+1$  $(I3)$ implies $I_1 \cup \{f_t\} \in \mathcal{I}$ for some $f_t \in I_2 \setminus I_1.$ \pause But this means that $\omega(f_t) \geq \omega(f_k) > \omega(e_k)$\\ \pause And hence the Greedy algorithm would have chosen $f_t$ over $e_k$, which gives us our contradiction.
 \end{proof}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Wrap Up}
-
-The combination of the previous lemma and our use of the greedy algorithm to find a maximal member $B$ of $\mathcal{I}$ of maximum weight allows us to deduce that Kruskal's algorithm does generate a minimum weight spanning tree of a graph. \\ \pause We have seen that the greedy algorithm gives us a solution to our optimisation problem as long as we have a matroid.\\ \pause Furthermore, the greedy does not provide a solution if the data does not form a matroid.
+\begin{itemize}
+\item The previous proof shows that the greedy algorithm finds a maximal member of $B$ of $\mathcal{I}$ of maximum weight\\
+\item This allows us to deduce that Kruskals algorithm is correct.\\
+\pause
+\item And  that the greedy algorithm gives us a solution to our optimisation problem as long as we have a matroid\\
+\pause
+\item Furthermore, the greedy does not provide a solution if the data does not form a matroid.
+\end{itemize}
 \end{frame}
 
 

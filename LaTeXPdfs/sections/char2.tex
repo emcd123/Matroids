@@ -1,0 +1,20 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+ \subsection{Bases}
+ 
+ \begin{thm}
+ Show that if $\mathcal{I}$ is a non-empty hereditary set of subsets of a finite set E, then $(E,\mathcal{I})$ is a matroid if and only if, for all $X \subset E$, all maximal members of $\{I : I \in \mathcal{I} $ and $ I \subset X\}$ have the same number of elements.
+ \end{thm}
+ 
+\noindent \Proof $(\implies)$ Let $B_1 , B_2$ be maximal elements of $\{I : I \in \mathcal{I} $and $ I \subset X\}$ \\
+\noindent And assume $|B_1| < |B_2|$
+Then since $B_1, B_2 \in \mathcal{I}$
+\\
+There exists $e \in (B_2 \setminus B_1)$ such that $B_1 \cup \{e\} \in \mathcal{I}$
+\\
+This contradicts our maximality of $B_1$.\\
+
+ \noindent $\implies$ All maximal elements of the set $\{I : I \in \mathcal{I} $ and $ I \subset X\}$ in our matroid M have the same cardinality.
+ \\ \qed
+ \end{document}
