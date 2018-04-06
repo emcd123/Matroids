@@ -11,8 +11,6 @@
 \usepackage{tkz-graph}
 \usepackage{algorithm, float}
 \usepackage[noend]{algpseudocode}
-%Includes "References" in the table of contents
-\usepackage[nottoc]{tocbibind}
  
 \title{Matroids And their Graphs}
 \author{o.mcdonnell4@nuigalway.ie }
@@ -65,10 +63,7 @@
                                 font = \bfseries},
   EdgeStyle/.append style = { } }
 \thispagestyle{empty}
- 
-\usepackage{biblatex}
-\addbibresource{matroid_bib.bib}
- 
+  
 \begin{document}
  
 \maketitle
@@ -103,10 +98,32 @@
 \section{Other Optimizable set-systems}
 \subfile{sections/gre1}
 
-\printbibliography[
-heading=bibintoc,
-title={Whole bibliography}
-] %Prints the entire bibliography with the titel "Whole bibliography"
+
+\begin{thebibliography}{}
+\bibitem{ox_book}
+    Oxley, James (1992), Matroid Theory, Oxford: Oxford University Press, ISBN 0-19-853563-5, MR 1207587, Zbl 0784.05002.
+\bibitem{ox_paper}
+    James Oxley : What is a matroid? https://www.math.lsu.edu/~oxley/survey4.pdf
+\bibitem{jungnickel}
+	Jungnickel, Dieter (2013), Graphs,Networks and Algorithms, Springer-Verlag Berlin Heidelberg, ISBN 978-3-642-32277-8 
+\bibitem{whitney}
+	Whitney, Hassler. “On the Abstract Properties of Linear Dependence.” American Journal of Mathematics, vol. 57, no. 3, 1935, pp. 		509–533. JSTOR, JSTOR, www.jstor.org/stable/2371182.
+\bibitem{maclane_saunders}
+	MacLane, Saunders. “Some Interpretations of Abstract Linear Dependence in Terms of Projective Geometry.” American Journal of 			Mathematics, vol. 58, no. 1, 1936, pp. 236–240. JSTOR, JSTOR, www.jstor.org/stable/2371070.
+\bibitem{kruskal}
+	Kruskal, Joseph B., Jr. On the shortest spanning subtree of a graph and the traveling salesman problem. Proc. Amer. Math. Soc. 7 	(1956), 48–50. 
+\bibitem{boruvka}
+	Otakar Borůvka, On a minimal problem, Práce Moravské Pridovedecké Spolecnosti, vol. 3, 1926. 
+\bibitem{welsh}
+	Dominic J.A. Welsh, A bound for the number of matroids, Journal of Combinatorial Theory, Volume 6, Issue 3, 1969, Pages 313-316, 	ISSN 0021-9800, https://doi.org/10.1016/S0021-9800(69)80094-3. (http://www.sciencedirect.com/science/article/pii/				S0021980069800943)
+\bibitem{greedoids}
+	Bjørner, A., Ziegler, G.M.: Introduction to greedoids. In: White, N.(ed) Matroid Applications, pp. 284–357. Cambridge University 	Press, Cambridge (1992)
+\bibitem{kortez__lovasz}
+	Korte and Lovasz (1984) Korte, B., Lovasz, L.: Greedoids and linear objective functions. SIAM J. Algebr. Discr. Math.5, 229– 			238 (1984)
+\bibitem{bryant_brooksbank}
+	Bryant,  V.,  Brooksbank,  P.:  Greedy  algorithm  compatibility  and heavy-set structures. Europ. J. Comb. 13 , 81–86 (1992)
+\end{thebibliography}
+
 
 \end{document}
 

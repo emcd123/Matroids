@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.20)  6 APR 2018 22:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.20)  6 APR 2018 22:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**intro2.tex
-(./intro2.tex
+**intro4.tex
+(./intro4.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.cls
@@ -946,8 +946,8 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 \c@excercise=\count165
 \c@solution=\count166
 \c@Question=\count167
-)) (./intro2.aux)
-\openout1 = `intro2.aux'.
+)) (./intro4.aux)
+\openout1 = `intro4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
@@ -976,42 +976,65 @@ LaTeX Font Info:    ... okay on input line 2.
 \makeMPintoPDFobject=\count173
 \everyMPtoPDFconversion=\toks49
 ) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+rsfs on input line 6.
+LaTeX Font Info:    Try loading font information for OMS+rsfs on input line 5.
 
-(/usr/share/texlive/texmf-dist/tex/latex/calrsfs/OMSrsfs.fd) [1
+(/usr/share/texlive/texmf-dist/tex/latex/calrsfs/OMSrsfs.fd)
+Overfull \hbox (69.31203pt too wide) in paragraph at lines 34--35
+[][] 
+ []
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./intro2.aux) ) 
+
+Overfull \hbox (127.64204pt too wide) in paragraph at lines 53--54
+[][] 
+ []
+
+
+Overfull \hbox (12.40654pt too wide) in paragraph at lines 81--82
+[][] 
+ []
+
+
+Overfull \hbox (21.57736pt too wide) in paragraph at lines 70--88
+[]$[]$   $[]$
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./intro4.aux) ) 
 Here is how much of TeX's memory you used:
- 15591 strings out of 494910
- 294000 string characters out of 6179835
- 352913 words of memory out of 5000000
- 18527 multiletter control sequences out of 15000+600000
- 7093 words of font info for 29 fonts, out of 8000000 for 9000
+ 15729 strings out of 494910
+ 296871 string characters out of 6179835
+ 378985 words of memory out of 5000000
+ 18664 multiletter control sequences out of 15000+600000
+ 9110 words of font info for 37 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 64i,6n,61p,449b,148s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs
-/rsfs10.pfb>
-Output written on intro2.pdf (1 page, 75860 bytes).
+ 64i,8n,67p,516b,1029s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
+>
+Output written on intro4.pdf (2 pages, 117162 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 19 words of extra memory for PDF output out of 10000 (max. 10000000)
 
