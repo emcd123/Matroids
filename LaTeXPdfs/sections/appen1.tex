@@ -1,0 +1,44 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+The following algorithm is useful towards implementing the greedy algorithm as described in \textit{section 4} due to the fact that the element of the edge set of a graph $G$ are sorted in terms of their weights. The following process is a straightforward method to arrange your elements in the desired order.
+
+\begin{algorithm}[H]
+\caption{Insertion Sort}\label{sorting}
+Let $A$ be an unsorted list containing real number positive values (to match our weight functions).
+\begin{algorithmic}[1]
+\Procedure{INSERTION}{$A$}
+\State $i \gets 1$
+\While{$i <$ length$(A)$}
+\State $j \gets i$
+\While{$j>0$ \textbf{and} $A[j-1] > A[j]$}
+	\State  \textbf{Swap} $A[j]$ \textbf{and} $A[j-1]$
+	\State $j \gets j-1$	
+	\EndWhile
+	\State $i \gets i+1$
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+This is a Perl5 implementation of an insertion sort I wrote, for small lists and graphs with a small number of edges this is a suitable sorting algorithms. For larger graphs, a more sophisticated algorithm such as quicksort might be more appropriate.
+\begin{lstlisting}
+use strict;
+use warnings;
+use Data::Alias;
+#my @li = (31, 46, 10, 6, 23, 9, 29, 19, 3, 46);
+sub InsertionSort{
+	my $i = 1;
+	while($i < scalar @li){
+		my $j = $i;
+		while($j>0 && $li[$j-1] > $li[$j]){
+			alias @li[$j,$j-1] = @li[$j-1,$j];
+			#$li[$j], $li[$j-1] = $li[$j-1], $li[$j];
+			$j = $j-1;
+		}
+		$i = $i+1;
+	}
+}
+InsertionSort(@li);
+\end{lstlisting}
+
+
+\end{document}

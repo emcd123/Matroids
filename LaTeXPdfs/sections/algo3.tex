@@ -2,6 +2,8 @@
 
 \begin{document}
 \subsection{Depth-first Search}
+The following search algorithm is how we will determine the connected components of a disconnected graph. We do this by selecting an arbitrary vertex of the graph as the "root". And then exploring along the branches from the vertex as far as possible until we need to backtrack, at which point we choose a new undiscovered arbitrary root and repeat. Labelling each vertex discovered along that exploration as discovered. The aim is to discover all the vertices of the graph.
+
 \begin{algorithm}[H]
 \caption{DFS}\label{dfs}
 Let $G$ be a graph with vertex set $V = \{1,...,n\}$
@@ -17,7 +19,7 @@ Let $G$ be a graph with vertex set $V = \{1,...,n\}$
 \end{algorithmic}
 \end{algorithm}
 
-\noindent This algorithm allows you to find the connected components of a disconnected graph. Then using the following algorithm we can check if our forest at each step of our algorithm is acyclic.
+\noindent This algorithm allows you to find the connected components of a disconnected graph. Then using the following algorithm we can check if our forest at each step of our algorithm is acyclic. We do this by counting the number of edges that each component has since we know a tree can have at most $n-1$ edges by \textit{lemma 3.7}. This procedure is invoked in \textit{algorithm 4}.
 
 \begin{algorithm}[H]
 \caption{Acyclic Check}\label{acyclic}

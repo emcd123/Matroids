@@ -33,12 +33,12 @@ We need the greedy algorithm to fail for only one weihgt function to get our con
 \item By assumption, it cannot then pick any element of $I_2 \setminus I_1.$ Thus the remaining elements of $B_G$ will be in $E \setminus (I_1 \cup I_2).$\\
 \end{itemize}
 Hence,\[
-\omega(B_G) = 2|I_1 \cap I_2| + |I_1 \setminus I_2|(\frac{1}{|I_1 \setminus I_2|})\\
+\omega(B_G) = 2|I_1 \cap I_2| + |I_1 \setminus I_2| \bigg( \frac{1}{|I_1 \setminus I_2|} \bigg) \\
 = 2|I_1 \cap I_2| + 1
 \]\\
 But by (I2), $I_2$ is contained in a maximal member $B_2$ of $\mathcal{I}$ and, $I_2 \subset B_2.$\\
 \[
-\omega(B_2) \geq \omega(I_2) = 2|I_1 \cap I_2| + |I_2 \setminus I_1|(\frac{1+\epsilon}{|I_2 \setminus I_1|})\\
+\omega(B_2) \geq \omega(I_2) = 2|I_1 \cap I_2| + |I_2 \setminus I_1| \bigg(\frac{1+\epsilon}{|I_2 \setminus I_1|} \bigg)\\
 > 2|I_1 \cap I_2| + 1 = \omega(B_G)
 \]\\
 $\implies \omega(B_2) > \omega(B_G)$\\
