@@ -22,9 +22,9 @@
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem*{cor}{Corollary}
 \theoremstyle{definition}
-\newtheorem{defn}{Definition}[section]
-\newtheorem{conj}{Conjecture}[section]
-\newtheorem{exmp}{Example}[section]
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{exmp}[thm]{Example}
 \theoremstyle{remark}
 \newtheorem*{rem}{Remark}
 \newtheorem*{note}{Note}
@@ -85,12 +85,11 @@
 \section{Graph Theory}
 \subfile{sections/g1}
 
-\section{Algorithms}
+\section{Greedy Algorithm}
 \subfile{sections/algo1}
-\subfile{sections/algo2}
-\subfile{sections/algo3}
 
 \section{Optimization Problems}
+\subfile{sections/algo2}
 \subfile{sections/opt1}
 \subfile{sections/opt3}
 \subfile{sections/opt2}
@@ -98,6 +97,8 @@
 \section{Other Optimizable set-systems}
 \subfile{sections/gre1}
 
+\section{Appendix}
+\subfile{sections/algo3}
 
 \begin{thebibliography}{}
 \bibitem{ox_book}
