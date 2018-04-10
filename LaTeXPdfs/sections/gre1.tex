@@ -1,23 +1,23 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\subsection{Accesible Set System}
+\subsection{Accessible Set-Systems}
 \begin{defn}
-An \textit{accesible set-system} is a pair $(E,\mathcal{S})$ where $E$ is a finite ground set and $\mathcal{S}$ is a non-empty subset of the power set of $E.$\\
+An \textit{accessible set-system} is a pair $(E,\mathcal{S})$ where $E$ is a finite ground set and $\mathcal{S}$ is a non-empty subset of the power set of $E.$\\
 Satisfying the follow \textit{accessibility axiom}:\\
 (A) For any non-empty feasible set $X \in \mathcal{S}.$ There exists an element $e \in X$ such that $X \setminus \{e\} \in \mathcal{S}.$
 Elements of $\mathcal{S}$ are called the \textit{feasible sets} of $M.$ Maximal feasible sets are also called \textit{bases}.
 \end{defn}
 
-This axiom is needed due to the process of the greedy algorithm. We require the ability to sequentially select a single element and then union it to our constructed solution at each step so an arbitrary set system is useless.
+The axiom $(A)$ is needed due to the process of the greedy algorithm. We require the ability to sequentially select a single element and then union it to our constructed solution at each step so an arbitrary set system is useless.
 
 \begin{rem}
-Matroid $\supseteq$ Indepence System $\subseteq$ Accesible Set-System.\\
-All matroids are indepence systems and all indepence systems are accesible set-systems but the converse is not true in general.
+Matroid $\supseteq$ Indepence System $\supseteq$ Accesible Set-System.\\
+All matroids are independence systems and all independence systems are accessible set-systems but the converse is not true in general.
 \end{rem}
 
 \noindent Our generalised problem is now:
 \begin{prop}
-For any accesible set-system $M$ and any weight function $\omega:E \longrightarrow \mathbb{R^+},$ the optimisation problem is:\\
+For any accessible set-system $M$ and any weight function $\omega:E \longrightarrow \mathbb{R^+},$ the optimisation problem is:\\
  Maximise $\omega(B)$ such that $B$ is a basis of $M.$
 \end{prop}
 \noindent We can now apply a modified greedy algorithm in order to find a solution to this generalised version of our matroid/independence system problem.
@@ -37,8 +37,8 @@ Let $M=(E,\mathcal{S})$ be an accessible set-system and $\omega:E \longrightarro
 \end{algorithmic}
 \end{algorithm}
 
-\noindent Using our above definitions and algorithm we can now begin finding solutions to our problem for any accessible set-system. However, we are interested in learning about the charactersations of these set-systems that lead to optimal solutions to our greedy algorithm as seen in \textbf{section 5.1}.\\
-One such caracterisation is the concept of a \textit{greedoid}. A greedoid is an accessible set-system satisfying (I3). Formally this means,
+\noindent Using our above definitions and algorithm we can now begin finding solutions to our problem for any accessible set-system. However, we are interested in learning about the characterisations of these set-systems that lead to optimal solutions by our greedy algorithm as seen in \textbf{section 5.2}.\\
+One such characterisation is the concept of a \textit{greedoid}. A greedoid is an accessible set-system satisfying (I3). Formally this means,
 \begin{defn}
 A greedoid is a pair $(E,\mathcal{S})$ where $E$ is a finite ground set and $\mathcal{S}$ is a collection of the feasible subsets of $E$ satisfying the following conditions:\\
 (I1): $\mathcal{S}$ is non-empty, $\emptyset \in \mathcal{S}.$\\
@@ -47,8 +47,8 @@ A greedoid is a pair $(E,\mathcal{S})$ where $E$ is a finite ground set and $\ma
 \end{defn}
 Unfortunately the greedy algorithm while providing solutions does not gaurantee optimal solutions for all greedoids. To characterise the greedoids that do result in optimal solutions when the greedy algorithm is applied we must add to our existing machinery an additional axiom. This is called the \textit{strong exchange axiom}. This axiom is a strong version of (I3) the exchange axiom of a matroid. 
 \begin{prop}
-Let $M=(E,\mathcal{S})$ be a greedoid. Then the above modified greedy algorithm  finds an optimal soltuion to our problem for any weight function $\omega:E \longleftrightarrow \mathbb{R^+}$ if and only if $M$ satisfies the follwing axiom:\\
-(SE): For $A,B \in \mathcal{S}$ with $|A|=|B|+1$, there always exists some $e \in A \setminus B$ such that $B \cup \{e\}$ and $A \setminus \{e\}$ are contained in $\mathcal{S}.$
+Let $M=(E,\mathcal{S})$ be a greedoid. Then the above modified greedy algorithm  finds an optimal soltuion to our problem for any weight function $\omega:E \longrightarrow \mathbb{R^+}$ if and only if $M$ satisfies the follwing axiom:\\
+(SE): For $A,B \in \mathcal{S}$ with $|A|=|B|+1$, there always exists some $e \in A \setminus B$ such that $B \cup \{e\}$ and $A \setminus \{e\}$ are contained in $\mathcal{S}.$ Which is very reminiscent of \textit{lemma 1.3}.
 \end{prop}
 \begin{rem}
 It can be seen that this axiom holds trivially for matroids due to the hereditary condition.

@@ -1,6 +1,6 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-The following algorithm is useful towards implementing the greedy algorithm as described in \textit{section 4} due to the fact that the element of the edge set of a graph $G$ are sorted in terms of their weights. The following process is a straightforward method to arrange your elements in the desired order.
+The following algorithm is useful towards implementing the greedy algorithm as described in \textit{section 4} due to the fact that the elements of the edge set of a graph $G$ must be sorted in terms of their weights. The following process is a straightforward method to arrange your elements in the desired order.
 
 \begin{algorithm}[H]
 \caption{Insertion Sort}\label{sorting}
@@ -19,12 +19,11 @@ Let $A$ be an unsorted list containing real number positive values (to match our
 \EndProcedure
 \end{algorithmic}
 \end{algorithm}
-This is a Perl5 implementation of an insertion sort I wrote, for small lists and graphs with a small number of edges this is a suitable sorting algorithms. For larger graphs, a more sophisticated algorithm such as quicksort might be more appropriate.
+This is a Perl5 implementation of an insertion sort I wrote, for sufficiently small lists this is a suitable sorting algorithm. For larger graphs, a more sophisticated algorithm such as quicksort might be more appropriate.
 \begin{lstlisting}
 use strict;
 use warnings;
 use Data::Alias;
-#my @li = (31, 46, 10, 6, 23, 9, 29, 19, 3, 46);
 sub InsertionSort{
 	my $i = 1;
 	while($i < scalar @li){
@@ -40,5 +39,45 @@ sub InsertionSort{
 InsertionSort(@li);
 \end{lstlisting}
 
+In terms of storing the graphs and weights while coding, the method I used in my implementation of Kruskal's algorithm involved use of Perl5's hash structure. A perl has is simply a list defined by key-values pairs, also known as an associative array. The code snippets below demonstrate how weights are associated with the edges, how the graph is initialised and how the edges are associated with a particular vertex.
+\begin{lstlisting}
+use strict;
+use warnings;
+use Data::Dumper qw(Dumper);
+use Tie::IxHash;
+my @V = ('A', 'B', 'C', 'D');
+my @E = ('AB', 'AC', 'AD', 'BD', 'BC', 'CD');
+
+my %WEIGHTS;
+tie %WEIGHTS, 'Tie::IxHash';
+foreach my $i (@E){
+  	my $range = $MAX_WEIGHT;
+  	my $random_number = int(rand($range));
+	$WEIGHTS{$i} =  $random_number;
+}
+print Dumper(\%WEIGHTS);
+\end{lstlisting}
+\begin{lstlisting}
+my %FOREST;
+tie %FOREST, 'Tie::IxHash';
+foreach my $j (@V){
+	$FOREST{$j} = [];
+}
+#print Dumper(\%FOREST);
+\end{lstlisting}
+\begin{lstlisting}
+my $temp_edge = 'AB';
+sub MatchVertexEdge{
+	my $ver_edge = $temp_edge;
+	my @edge_components = split(//, $ver_edge);
+	print @edge_components;
+	foreach my $vertex (@edge_components){
+		push @{$FOREST{$vertex}}, 
+	}
+}
+MatchVertexEdge($temp_edge);
+\end{lstlisting}
+
+With all this it should be more than possible to implement these processes in almost any language. Better ideas are welcome as pull requests to the repository\cite{github}.
 
 \end{document}

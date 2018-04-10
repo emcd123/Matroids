@@ -1,7 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \subsection{Graphs and their corresponding Matroid Theory}
-In this section we introduce the graph theoretic deifnitions and results needed to understand the algorithms and subsequent optimisation in later sections. These definitions and results come mainly from Jungnickel's\cite{jungnickel} text. We will also see how the subsequent properties of graphs naturally align with the properties of matroids and in particular to bases of matroids which are the cornerstone of the results in the later sections.
+In this section we introduce the graph theoretic definitions and results needed to understand the algorithms and subsequent optimisation in later sections. These definitions and results come mainly from Jungnickel's\cite{jungnickel} text. We will also see how these properties of graphs naturally align with the properties of matroids and in particular to bases of matroids which are the cornerstone of the results in the later sections.
 
 \begin{defn}[Connected]
 A graph is connected when there is a path between each pair of vertices.
@@ -20,11 +20,11 @@ A connected graph containing no circuits. In other words, acyclic graphs.\\
 \noindent A forest is a disconnected graph containing no circuits\\
 \end{defn}
 
-\noindent We know from \textit{theorem 1.7}. If we let $E$ be the edge set of our graph $G.$ And we define $\mathcal{I}$ as the subsets of $E$ not containing all of the edges of any cycle in $G$ we have $M(G)$ the cycle matroid of G. We know that this is a matroid, and it is easy to see that in this case the elements of $\mathcal{I}$ correspond exactly to the trees of $G.$
+\noindent We know from \textit{theorem 1.7}. If we let $E$ be the edge set of our graph $G.$ And we define $\mathcal{I}$ as the subsets of $E$ not containing all of the edges of any cycle in $G$ we have $M(G),$ the cycle matroid of G. We know that this is a matroid, and it is easy to see that in this case the elements of $\mathcal{I}$ correspond exactly to the trees of $G.$
 
  
 \begin{defn}[Spanning Tree]
-A spanning tree $T$ of an undirected graph $G$ is a subgraph that is a \textit{tree} which includes all of the vertices of $G.$\\
+A spanning tree $T$ of an graph $G$ is a subgraph that is a \textit{tree} which includes all of the vertices of $G.$\\
 \noindent A disconnected graph cannot contain a spanning tree as we cannot find a walk which brings us to all of the disconnected vertices.
 \end{defn}
 
@@ -44,16 +44,16 @@ Determining the number of spanning trees of a graph in polynomial time is NP-har
 Any acyclic graph on $n$ vertices has at most $n-1$ edges.
 \end{lem}
 \noindent\Proof Let G be an acyclic graph with n vertices.\\
-\noindent if n = 1 then we have no edges hence nothing to prove.\\
-\noindent Assumse $n>1,$ let $e$ be an edge in $G$ connecting two vertices $ab$ in the vertex set of $G.$\\
-\noindent Let $H = G \setminus \{e\}, H$ has one more connected component than $G.$ $H$ has two maximal acyclic connected componenets, and thus can be decomposedinto acyclic connected graphs $H_1, H_2, ..., H_k where k \geq 2.$\\
+\noindent If n = 1 then we have no edges hence nothing to prove.\\
+\noindent Assume $n>1,$ let $e$ be an edge in $G$ connecting two vertices $ab$ in the vertex set of $G.$\\
+\noindent Let $H = G \setminus \{e\}, H$ has one more connected component than $G.$ $H$ has two maximal acyclic connected components, and thus can be decomposed into acyclic connected graphs $H_1, H_2, ..., H_k$ where $k \geq 2.$\\
 \noindent By induction, we can assume each graph $H_i$ contains at most $n_i - 1$ edges where $n_i$ is the number of vertices of $H_i.$\\
 \noindent Then $G$ has at most $n-1$ edges.\\
 \noindent $(n_1 - 1) + ... + (n_k - 1) + 1 = (n_1 + ... + n_k) - (k - 1) \leq n - 1$ edges.
 \\ \qed
 
 \begin{defn}[Bridge]
-A bridge(or cut edge) is an edge of a graph whose deletion increases the numbe rof connected components. Equivalently, an edge is a bridge is and only if it is not contained in any cycle.
+A bridge(or cut edge) is an edge of a graph whose deletion increases the number of connected components. Equivalently, an edge is a bridge if and only if it is not contained in any cycle.
 \end{defn}
 
 \noindent The above definition is mainly useful for us in proving the next lemma, which comes from Jungnickel's text and will help us visualise the characteristics of a spanning tree of a graph. In particular condition $(1)$ and $(2)$, will allow us to see that the spanning trees of a graph directly correspond to the bases of a matroid.
@@ -70,24 +70,24 @@ A bridge(or cut edge) is an edge of a graph whose deletion increases the numbe r
  \noindent Suppose that $G$ is a tree,then $G$ is a connected graph with no circuits. Let $e$ be a new edge in G with $e = g_ig_k$ where $g_i,g_k$ are in the vertex set of $G.$ Then as $G \cup \{e\}$ must be connected, there exists a walk between any pair of vertices of $G$. So there is a walk $K$ from $g_j \rightarrow g_k$ and there is also a walk $L$ from $g_k \rightarrow g_j$ where $K$ does not traverse $e$ and $L$ does traverse $e$ and so we have a cycle.\\
 
 \noindent\Proof $(2) \Longrightarrow (3)$\\
-\noindent Let $u,v$ be vertices of $G.$ If there was not path joining $uv$ in $G$ then $e = uv$ does not create a cycle in $G.$ Thus $G$ must be connected.\\
+\noindent Let $u,v$ be vertices of $G.$ If there was no path joining $uv$ in $G$ then $e = uv$ does not create a cycle in $G.$ Thus $G$ must be connected.\\
 \noindent Suppose $G$ contained two different paths $W_1, W_2$ from $u$ to $v.$\\
 \noindent Then $ u \longrightarrow v \longrightarrow u$ would be a closed walk in $G. \\ \implies G$ contains a cycle. Which is a contradiction.\\
 
 \noindent\Proof $(3) \Longrightarrow (4)$\\
 \noindent $G$ is connected by hypothesis. Let $e = uv$ be an edge in $G.$\\
-\noindent Suppose $e$ is not a bridge, then $G \setminus \{e\}$ is still connected. But then we have two distinct path from u to v in G.\\
+\noindent Suppose $e$ is not a bridge, then $G \setminus \{e\}$ is still connected. But then we have two distinct paths from $u$ to $v$ in $G.$\\
 
 \noindent\Proof $(4) \Longrightarrow (1)$\\
-\noindent G is connected by hypotheis.\\
+\noindent G is connected by hypothesis.\\
 \noindent Suppose $G$ contains a cycle $K.$ Then any edge of $K$ could be ommited from $G,$ and the resulting graph would still be connected. In other words, no edge of $K$ would be a bridge, a contradiction.\\
 \qed
 
 \noindent The vertices of a graph/network can be labelled and referred to as nodes. Information may then be recorded in them along with a cost, penalty or probability associated with each edge. For example, the problem of joining all nodes in a graph by the minimum length using our respective metric to a tree known as a \textit{minimum spanning tree}.
 
-\noindent Weights can be assigned using a process as detailed below. We will later redefine this process in a more suitable way to take advantage of matroid properties in order to determine these minimum spanning trees in graphs.
+\noindent Weights can be assigned using a process as detailed below. We will later redefine this process in a more suitable way to take advantage of matroid properties in order to determine the minimum spanning trees in graphs.
 \begin{defn}
-let $(G,\omega)$ be a network. For any subset $T$ of the edge set of $G, \omega$ is called the weight of $T.$\\
+Let $(G,\omega)$ be a network. For any subset $T$ of the edge set of $G, \omega$ is called the weight of $T.$\\
 \begin{equation}
 \omega (T) = \displaystyle\sum_{e \in T} \omega (T)
 \end{equation}
@@ -100,7 +100,7 @@ A spanning tree is a \textit{minimal} spanning tree if its weight is minimal of 
 
 \begin{rem}
 If the weight $\omega$ is constant, any spanning tree is minimal.\\
-\noindent In this case, determining a minimal spanning tree could be done using a breadth-first search.
+\noindent In this case, determining a minimal spanning tree could be done using a breadth-first search. Which is a similar procedure to the described depth-first section in \textit{appendix,algorithm 6}.
 \end{rem}
 
  \end{document}

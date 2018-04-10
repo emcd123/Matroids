@@ -3,11 +3,11 @@
 \begin{document}
 
 \subsection{What is a Matroid}
-Matroid theory arose from the investigations of the mathematician H.Whitney \cite{whitney} of the concept of linear dependence and so borrows heavily from and abstracts a significant amount of linear algebraic concepts particularly with regards  matrices and vector spaces. For example, the properties that can be discussed from subsets of linearly independent columns of a given  matrix. Another very natural application of matroid theory is graph theory, looking at for example the present of closed walks, or trees and in particular spanning trees of graphs. This will be the focus in this paper as we follow Oxley's survey of matroid theory\cite{ox_paper} and textbook.\cite{ox_book}\\ 
+Matroid theory arose from the investigations of the mathematician H.Whitney \cite{whitney} of the concept of linear dependence and so borrows heavily from and abstracts a significant amount of linear algebra concepts particularly with regards  matrices and vector spaces. For example, the properties that can be discussed from collections of subsets of linearly independent columns of a given  matrix. Another very natural application of matroid theory is graph theory, looking at for example the presence of closed walks, or trees and in particular spanning trees of graphs. This will be the focus in this paper as we follow Oxley's survey of matroid theory\cite{ox_paper} and accompanying textbook.\cite{ox_book}\\ 
 
 \vspace{1mm}
 
-\noindent We will begin by describing what it means for a set to be independent and to clarify what it means to be an independent set in a set-system and to describe the structure needed to describe our system as a matroid. This begins with the follow defintion.
+We will begin by describing what it means for a set to be independent and to clarify what it means to be an independent set in a set-system and to describe the structure needed to describe our system as a matroid. This begins with the following definition.
 
 \begin{defn}
 An \textit{independence system} is a pair $(E,\mathcal{S}),$ where $E$ is a finite set and $\mathcal{S}$ is a collection of sets satisfying the following conditions:\\
@@ -16,7 +16,7 @@ An \textit{independence system} is a pair $(E,\mathcal{S}),$ where $E$ is a fini
 \noindent The elements of $\mathcal{S}$ are called the \textit{independent sets}.
 \end{defn}
 
-\noindent These independence systems can then be extended into matroids by adding a third axiom, the \textit{exchange axiom}. As we can see from the following defintion, all matroids are independence systems but the converse will not be true in general.
+\noindent These independence systems can then be extended into matroids by adding a third axiom, the \textit{exchange axiom}. As we can see from the following definition, all matroids are independence systems but the converse will not be true in general.
 
 \begin{defn}
 A matroid is a pair $(E,\mathcal{I})$ with finite ground set E and $\mathcal{I}$ being a collection of independent subsets of E satisfying the following conditions:\\
@@ -31,24 +31,22 @@ Prove that $(E,\mathcal{I})$ is a matroid if and only if $\mathcal{I}$ satisfies
 \end{lem}
 \begin{proof}
 Suppose $(E,\mathcal{I})$ is a matroid. Then by hypothesis, $\mathcal{I}$ satisies $(I1),(I2).$\\
-\noindent Let $I_1,I_2 \in \mathcal{I}$ and $|I_2|=|I_1|+1$ then $|I_2|>|I_1|$ and so $(I3)'$ holds trivially due to the defnition of a matroid.
-\noindent But by $(I2)$ there is an $I_2'$ such that $e \in I_2'$ and $|I_2'|=|I_1|+1$ as a matorid is hereditary and $I_2' \subset I_2.$
-$\implies \exists e \in I_2' \setminus I_1$ such that $I_1 \cup \{e\} \in \mathcal{I}.$\\
+\noindent Let $I_1,I_2 \in \mathcal{I}$ and $|I_2|=|I_1|+1$ then $|I_2|>|I_1|$ and so $(I3)'$ holds trivially due to the defnition of a matroid.\\
 Conversely, Suppose $\mathcal{I}$ satisfies $(I2),(I1),(I3)'$\\
 Let $I_1,I_2$ be in $\mathcal{I}$ such that $|I_2|=|I_1|+1$, then there exists $e$ in $I_2 \setminus I_1$ such that $I_1 \cup \{e\}.$\\
 Let $I_1'$ be in $\mathcal{I}$ where $I_1' \supseteq I_1$ then $e$ in $I_1' \setminus I_2$ and $|I_1'|>|I_2|.$ From this we can see that every independent set $A$ with cardinality greater than an independent set $B$ can be shrunk by removing elements while retaining independence due to $(I2)$(the hereditary property) until we have $|A|=|B|+1$ and then we can apply $(I3)'.$ Therefore the matroid property $(I3)$ is satisfied through $(I3)'.$
 \end{proof}
 
 \begin{note}
-The above defintions of the \textit{exchange axiom}, defined by $(I3), (I3)'$ will be used interchangeably for the remainder of this paper.
+The above definitions of the \textit{exchange axiom}, defined by $(I3), (I3)'$ will be used interchangeably for the remainder of this paper.
 \end{note}
 
-The following example draws attention to an important property of matroids in their intersection. The intersection of a matroid is not gauranteed to also be a matroid. This example gives a demonstration of the structure of a matroid defined on a set $E.$
+The following example draws attention to an important property of matroids,their intersection. The intersection of a matroid is not gauranteed to also be a matroid. This example gives a demonstration of the structure of a matroid defined on a set $E.$
 \begin{exmp}
 Let $M_1, M_2$ be matroids on a set $E.$ Let $E=\{1,2,3,4\}$\\
 \noindent Let $\mathcal{I}_1 = \{\emptyset, \{1\},\{2\},\{3\},\{4\},\{1,2\},\{1,3\},\{2,4\},\{3,4\}\}$\\
 \noindent Let $\mathcal{I}_2 = \{\emptyset, \{1\},\{2\},\{3\},\{4\},\{1,2\},\{1,4\},\{2,3\},\{3,4\}\}$\\
-\noindent Let $\mathcal{I}_1 \cap \mathcal{I}_2 = \{\emptyset, \{1\},\{2\},\{3\},\{4\},\{1,2\,\{3,4\}\}$\\
+\noindent Therefore, $\mathcal{I}_1 \cap \mathcal{I}_2 = \{\emptyset, \{1\},\{2\},\{3\},\{4\},\{1,2\,\{3,4\}\}$\\
 let $(E, \mathcal{I}_1 \cap \mathcal{I}_2)$ be a pair, is it a matroid?\\
 Let $I_1 = \{1,2\}$ and $I_2=\{3\}$\\
 If there exists an $e \in I_1$ such that $I_2 \cup \{e\} \in \mathcal{I}$ then we have a matroid. Otherwise we do not have a matroid.\\
@@ -56,5 +54,5 @@ $I_2 \cup \{1\} = \{1,3\} \notin \mathcal{I}$,\\
 $I_2 \cup \{2\} = \{2,3\} \notin \mathcal{I}$\\
 \noindent $\implies (E, \mathcal{I}_1 \cap \mathcal{I}_2)$ is not a matroid.
 \end{exmp}
-\noindent We will proceed through this paper discussing the various structures of matroids (i.e circuits,bases and rank), illustrating their graph theoretic counterparts and some applications that where matroids allow us to avail of some interesting properties. Concluding with a brief overview at some non-hereditary set-systems that share a common application with matroids.
+\noindent We will proceed through this paper discussing the various structures of matroids (i.e circuits,bases and rank), illustrating their graph theoretic counterparts and some applications where matroids allow us to avail of some interesting properties. Concluding with a brief overview at some non-hereditary set-systems that share a common application with matroids.
 \end{document}

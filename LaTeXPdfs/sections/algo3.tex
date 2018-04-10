@@ -19,11 +19,11 @@ Let $G$ be a graph with vertex set $V = \{1,...,n\}$
 \end{algorithmic}
 \end{algorithm}
 
-\noindent This algorithm allows you to find the connected components of a disconnected graph. Then using the following algorithm we can check if our forest at each step of our algorithm is acyclic. We do this by counting the number of edges that each component has since we know a tree can have at most $n-1$ edges by \textit{lemma 3.7}. This procedure is invoked in \textit{algorithm 4}.
+\noindent This algorithm will allow you to find the connected components of a disconnected graph. Then using the following algorithm we can check if our forest at each step of our algorithm is acyclic. We do this by counting the number of edges that each component has since we know a tree can have at most $n-1$ edges by \textit{lemma 3.7}. This procedure is invoked in \textit{algorithm 3}.
 
 \begin{algorithm}[H]
 \caption{Acyclic Check}\label{acyclic}
-Let $G$ be a graph with the set of connected componenets $C$ as found by DFS(G,v) where v is an arbitrary vertex in G.
+Let $G$ be a graph with the set of connected components $C$ as found by DFS(G,v) where v is an arbitrary vertex in G.
 \begin{algorithmic}[1]
 \Procedure{ACYCLIC}{$G,C$}
 \ForAll{$i$ \textbf{in} $C$} 

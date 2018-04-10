@@ -3,8 +3,8 @@
 \begin{document}
 \subsection{Optimisation Example: Kruskal's Algorithm}
 \begin{exmp}
-Suppose we have a country containing an $n$ number of cities that are currently isolated from each other.  As the new minister for transport it is your idea to correct this tansport issue and to lay a railroad which should connect each city to any other city by a unique path. However, you have a budget. Each railway line will cost a certain predefined amount to lay (with no difficulties or unforeseen costs). How will you decide which city-links are the optimal ones to lay railtracks on?\\
-We will soon see that this can be done  by finding a minimal spanning tree. Which can be found through a greedy algorithm process. A suitable example of this kind of algorithm which should solve our problem is Kruskal's Algorithm. Which is detailed below.
+Suppose we have a country containing an $n$ number of cities that are currently isolated from each other.  As the new minister for transport it is your idea to correct this transport issue and to lay a railroad which should connect all the cities of your country. However, you have a budget. Each railway line will cost a certain predefined amount to lay (with no difficulties or unforeseen costs). How will you decide which city-links are the optimal ones to lay railtracks on?\\
+\indent We will soon see that this can be done  by finding a minimal spanning tree. Which can be found through a greedy algorithm process. A suitable example of this kind of algorithm which should solve our problem is Kruskal's Algorithm, which is detailed below.
 \end{exmp}
 
 \begin{algorithm}[H]
@@ -22,11 +22,9 @@ Let $G$ be a connected graph with vertex set $V = \{1,...,n\}$ and $\omega:E \lo
 \end{algorithmic}
 \end{algorithm}
 
-This process is very similar to our prior description of the generic greedy algorithm. Although this time, we sort the elements of our edge set from lightest to heaviest. And then we iterate through. At each iteration, we check if the created set created by through $T \cup \{e_k\}$ at each iteration remains an independent  and if so we add $e_k$ to the generated set and if not we ignore that element and move to the next in the list $E.$
+This process is very similar to our prior description of the generic greedy algorithm. Although this time, we sort the elements of our edge set from lightest to heaviest. And then we iterate through. At each iteration, we check if the created set created by $T \cup \{e_k\}$ at each iteration remains independent and if so we add $e_k$ to the generated set and if not we ignore that element and move to the next in the list $E.$
 
-\vspace{2mm}
-
-For graphs, the process above is equivalent to this semi-pseudocode. That you make a forest containing just the vertices of $G.$ And then we iteratively add the desired elements to that forest as long as no cycles are induces in the resulting subgraph of $G.$
+For graphs, the process above is equivalent to this semi-pseudocode. That you make a forest containing just the vertices of $G.$ And then we iteratively add the desired elements to that forest as long as no cycles are induced in the resulting subgraph of $G.$
 \begin{algorithm}
 $1)$ Create a graph $F$ containing just the vertices of $G.$\\
 $2)$ Create a set $S = E(G)$; the edge set of $G.$ \\
@@ -36,5 +34,5 @@ $3)$ While $S$ is non-empty and $F$ is not yet spanning\\
 \hspace{5mm} then add the edge to $F$\\
 \end{algorithm}
 
-In the next section we will prove the correctness of algorithms such as this. It is also notable to mention that Kruskal's algorithm will terminate after excatly $n-1$ iterations, where $n$ is the number of vertices in a graph. This corresponds to the \textit{lemma 3.7} which says a spanning tree has exactly $n-1$ edges. Any more edges added at that point will induce a cycle and so kruskal's algorithm terminates.
+In the next sub-section we will prove the correctness of algorithms such as this. It is also notable to mention that Kruskal's algorithm will terminate after exactly $n-1$ iterations, where $n$ is the number of vertices in a graph. This corresponds to \textit{lemma 3.7} which says a spanning tree has exactly $n-1$ edges. Any more edges added at that point will induce a cycle and so kruskal's algorithm terminates.
 \end{document}
