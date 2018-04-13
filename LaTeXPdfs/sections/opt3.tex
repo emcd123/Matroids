@@ -1,27 +1,26 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\begin{lem}
-Let $M$ be a matroid and $\omega: E(M) \longrightarrow \mathbb{R^+}$ be a one-to-one function. Prove that $M$ has a unique basis of maximum weight.
-\end{lem}
+The following two propositions appear as excercises in Oxley's text\cite{ox_book}
+\begin{prop}
+Let $M$ be a matroid and $\omega: E(M) \longrightarrow \mathbb{R^+}$ be a one-to-one function. Then $M$ has a unique basis of maximum weight.
+\end{prop}
 \begin{proof}
-Let $\omega$ be an injective function, this will then allow no repitition of weights on edges. As this would mean more than one value in the domain would be mapped to one value in the range.\\
+Let $\omega$ be an injective function, this will mean that each edge has a unique weight. \\
 We want to find an independent set $A$ whose weight is maximal, where
 \begin{equation}
-\omega(A) := \sum_{e \in A} \omega (e)
+\omega(A) := \sum_{e \in A} \omega (e).
 \end{equation}
 We can then arrange our edges in a set $S$ by order of decreasing weight such that $\omega(e_1) \geq \omega(e_2) \geq ... \geq \omega(e_k).$\\
-We have already seen in \textit{theorem 5.1} that the greedy algorithm as described in \textit{algorithm 2/4.1} provides a solution to this optimisation problem. And since there is no repition in weights there is no point in the algorithm where there is more than a single choice as to the next chosen edge. Therefore there is only one possible solution when our weight function is injective.
-
-\vspace{3mm}
-
-If we lose the injectivity condition, then this is not the case and we cannot guarantee uniqueness in general. This can be caused by slecting edges of equal weight in differing orders, and by choosing in this way a cycle may be induced and so the order at which those edges of equal weights are selected affect the resulting spanning trees. As will be seen in the next theorem.
+We have already seen in \textit{theorem 5.1} that the greedy algorithm as described in \textit{algorithm 2/4.1} provides a solution to this optimisation problem. And since there is no repitition in weights there is no point in the algorithm where there is more than a single choice as to the next chosen edge. Therefore there is only one possible solution when our weight function is injective.
 \end{proof}
-
-\begin{thm}
-Let $M$ be a mtroid and $\omega: E(M) \longrightarrow \mathbb{R^+}.$ When the greedy algorithm is applied to the pair $(\mathcal{I},\omega)$, each iteration of the greedy algorithm involves a potential choice. Thus, in general, there are a number of different sets that the algorithm can produce as solutions to the optimisation problem $(\mathcal{I}, \omega).$ Let $\mathcal{B}_G$ be the set of such sets and let $\mathcal{B}_{max}$ be the set of maximum weight bases of $M.$ Prove that $\mathcal{B}_G = \mathcal{B}_{max}.$
-\end{thm}
+\begin{rem}
+If we lose the injectivity condition, then this is not the case and we cannot guarantee uniqueness in general. This can be caused by selecting edges of equal weight in differing orders, and by choosing in this way a cycle may be induced and so the order in which those edges of equal weights are selected affects the resulting spanning trees as will be seen in the next theorem.
+\end{rem}
+\begin{prop}
+Let $M=(E,\mathcal{I})$ be a matroid and $\omega: E(M) \longrightarrow \mathbb{R^+}.$ When the greedy algorithm is applied to the pair $(\mathcal{I},\omega)$, each iteration of the greedy algorithm involves a potential choice. Thus, in general, there are a number of different sets that the algorithm can produce as solutions to the optimisation problem $(\mathcal{I}, \omega).$ Let $\mathcal{B}_G$ be the set of such sets and let $\mathcal{B}_{max}$ be the set of maximum weight bases of $M,$ then $\mathcal{B}_G = \mathcal{B}_{max}.$
+\end{prop}
 \begin{proof}
-Suppose $\omega$ is an injective function, then we've show there is a unique maximum weight basis for $M$ in \textit{theorem 5.4} and so the proof of this trivial.\\
+Suppose $\omega$ is an injective function, then we have shown there is a unique maximum weight basis for $M$ in \textit{theorem 5.4} and so the proof of this trivial.\\
 Now suppose $\omega$ is not injective.This means maximal weight bases of $M$ are not in general unique.\\
 If $r(M) = r,$ then $B_G = \{e_1,e_2, ..., e_r\}$ is a basis of $M.$ Let $B_G'$ be another basis of $M$, $B_G' = \{f_1, f_2, ..., f_r\}.$ Both $B_G, B_G'$ are bases generated through the greedy algorithm as described in \textit{section 4.1}.
 We arrange both these bases in terms of decreasing order where $\omega(e_1), \omega(f_1)$ are the heaviest elements in their respective bases.\\

@@ -2,18 +2,17 @@
 \begin{document}
 \subsection{Accessible Set-Systems}
 \begin{defn}
-An \textit{accessible set-system} is a pair $(E,\mathcal{S})$ where $E$ is a finite ground set and $\mathcal{S}$ is a non-empty subset of the power set of $E.$\\
-Satisfying the follow \textit{accessibility axiom}:\\
-(A) For any non-empty feasible set $X \in \mathcal{S}.$ There exists an element $e \in X$ such that $X \setminus \{e\} \in \mathcal{S}.$
-Elements of $\mathcal{S}$ are called the \textit{feasible sets} of $M.$ Maximal feasible sets are also called \textit{bases}.
+An \textit{accessible set-system} is a pair $M=(E,\mathcal{S})$ where $E$ is a finite ground set and $\mathcal{S}$ is a non-empty subset of the power set of $E.$ Elements of $\mathcal{S}$ are called the \textit{feasible sets} of $M.$ Maximal feasible sets are also called \textit{bases}.\\
+$\mathcal{S}$ satisfies the following \textit{accessibility axiom}:\\
+(A) For any non-empty feasible set $X \in \mathcal{S}$ there exists an element $e \in X$ such that $X \setminus \{e\} \in \mathcal{S}.$
 \end{defn}
 
 \begin{rem}
-Matroid $\supseteq$ Independence System $\supseteq$ Accesible Set-System.\\
+Matroid $\supseteq$ Independence System $\supseteq$ Accessible Set-System.\\
 All matroids are independence systems and all independence systems are accessible set-systems but the converse is not true in general.
 \end{rem}
 
-\noindent The axiom $(A)$ is needed due to the process of the greedy algorithm. We require the ability to sequentially select a single element and then union it to our constructed solution at each step so an arbitrary set system cannot guarantee this. This axiom however ensures that at each step such an element does in fact exist. Although the subset of possible choices for this element may not be the same at each iteration of the process, which leads to further possible issues.
+\noindent The axiom $(A)$ is needed due to the process of the greedy algorithm. We require the ability to sequentially select a single element and then union it to our constructed solution at each step so an arbitrary set system cannot guarantee this. Axiom (A) however ensures that at each step such an element does in fact exist, although the subset of possible choices for this element may not be the same at each iteration of the process, which leads to further possible issues.
 
 \noindent Our general problem can now be restated as:
 \begin{prop}
@@ -37,13 +36,13 @@ Let $M=(E,\mathcal{S})$ be an accessible set-system and $\omega:E \longrightarro
 \end{algorithmic}
 \end{algorithm}
 
-\noindent Using our above definitions and algorithm we can now begin finding solutions to our problem for any accessible set-system. However, we are interested in learning about the characterisations of these set-systems that lead to optimal solutions through the use of our greedy algorithm as described in \textbf{section 5.2}.\\
+\noindent Using our above definitions and algorithm we can now begin finding solutions to our problem for any accessible set-system. However, we are interested in learning about the characterisations of these set-systems that lead to optimal solutions through the use of our greedy algorithm as described in \textit{section 5.2}.\\
 One such characterisation is the concept of a \textit{greedoid}. A greedoid is an accessible set-system satisfying (I3). Formally this means,
 \begin{defn}
-A greedoid is a pair $(E,\mathcal{S})$ where $E$ is a finite ground set and $\mathcal{S}$ is a collection of the feasible subsets of $E$ satisfying the following conditions:\\
+A \textit{greedoid} is a pair $(E,\mathcal{S})$ where $E$ is a finite ground set and $\mathcal{S}$ is a collection of the feasible subsets of $E$ satisfying the following conditions:\\
 (I1): $\mathcal{S}$ is non-empty, $\emptyset \in \mathcal{S}.$\\
-(A):  For any non-empty feasible set $X \in \mathcal{S}.$ There exists an element $e \in X$ such that $X \setminus \{e\} \in \mathcal{S}.$\\
-(I3): If $ A $ and $ B $ are two independent sets of $\mathcal{I}$ and $|A|>|B|$, then there exists $x \in A \setminus B$ such that $B \cup \{ x \}$ is in $\mathcal{I}.$
+(A):  For any non-empty feasible set $X \in \mathcal{S}$ there exists an element $e \in X$ such that $X \setminus \{e\} \in \mathcal{S}.$\\
+(I3): If $ A $ and $ B $ are two independent sets of $\mathcal{S}$ and $|A|>|B|$, then there exists $x \in A \setminus B$ such that $B \cup \{ x \}$ is in $\mathcal{S}.$
 \end{defn}
 Unfortunately the greedy algorithm while providing solutions does not gaurantee optimal solutions for all greedoids. To characterise the greedoids that do result in optimal solutions when the greedy algorithm is applied we must add to our existing machinery an additional axiom. This is called the \textit{strong exchange axiom}. This axiom is a strong version of (I3): the exchange axiom of a matroid. 
 \begin{prop}

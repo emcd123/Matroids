@@ -2,9 +2,9 @@
 \begin{document}
 
 \subsection{Circuit characterization of a matroid}
-In the paper of Oxley \cite{ox_paper} it is said that "A set in a matroid that is not independent is called dependent.The hereditary property,(I2), means that a matroid is uniquely determined by its collection of maximal independent sets, which are called bases , or by its collection of minimal dependent sets, which are called circuits." \\
-\indent The circuits of a graph are an intuitive concept, and so it is natural to define the cycle matroid $M(G)$ of a graph in terms of its circuits. These circuits are the "edge sets of cycles in a graph $G".$ All dependent sets in a matroid contain a circuit.\\
-\indent A circuit of a matroid is defined as a minimally dependent set due to the fact that a circuit is a dependent set with the minimum number of edges to be dependent. i.e if you remove one edge we have an independet set.
+In the paper of Oxley \cite{ox_paper} it is said that "A set in a matroid that is not independent is called dependent.The hereditary property,(I2), means that a matroid is uniquely determined by its collection of maximal independent sets, which are called bases, or by its collection of minimal dependent sets, which are called circuits." \\
+\indent The circuits of a graph are a rather intuitive concept, and so it is natural to define the cycle matroid $M(G)$ of a graph in terms of its circuits. These circuits are the "edge sets of cycles in a graph $G".$ All dependent sets in a matroid contain a circuit.\\
+\indent A circuit of a matroid is defined as a minimally dependent set due to the fact that a circuit is a dependent set with the minimum number of edges to be dependent. i.e if you remove one edge we have an independent set.
 
 \begin{defn} By using (I1)–(I3) , it is not difficult to show that the collection $\mathcal{C}$ of circuits of a matroid M has the following three properties:\\
 (C1) The empty set is not in $\mathcal{C}$\\
@@ -13,20 +13,20 @@ In the paper of Oxley \cite{ox_paper} it is said that "A set in a matroid that i
 $ e \in C_1 \cap C_2 $, then $ (C_1 \cup C_2 ) \setminus \{e\} $ contains a member of $\mathcal{C}$ 
  \end{defn}
  
-\noindent The following two proof appear in Oxley's text and shows how the circuits define a matroid and how circuits appear in graphs.\cite{ox_book}
+\noindent The following two proofs appear in Oxley's text and shows how the circuits define a matroid and how circuits appear in graphs.\cite{ox_book}
 
  \begin{thm}
  Let M be a matroid and $\mathcal{C}$ be its collection of circuits. Then $\mathcal{C}$ satisfies (C1) - (C3)
   \end{thm}
 \begin{proof}
-\noindent (C1) is obvious as by $I1$ the empty set must always be an independent set.
+\noindent $(C1)$ is obvious as by $(I1)$ the empty set must always be an independent set.
  
-\noindent (C2) is also straightforward because any $ C \in \mathcal{C} $ is a minimally independent set by definition. Therefore , if there exists a $ C_1 \in \mathcal{C} $ such that $ C_1 \subset C $ then $ C_1 \in \mathcal{C} $ and $ C $ is not a minimally dependent subset of E. 
+\noindent $(C2)$ is also straightforward because any $ C \in \mathcal{C} $ is a minimally independent set by definition. Therefore , if there exists a $ C_1 \in \mathcal{C} $ such that $ C_1 \subset C $ then $ C_1 \in \mathcal{C} $ and $ C $ is not a minimally dependent subset of E. 
  
  \vspace{2mm}
  
- \noindent (C3) Let $ A, B \in \mathcal{C} $ and suppose that(Seeking a contradiction) $ (A \cup B) \setminus \{e\} $ where $ e $ is $ \in (A \cap B) $ does not contain a circuit.\\
- \noindent Then $ (A \cup B) \setminus \{e\} $ is independent and therefore in $\mathcal{I}$
+ \noindent $(C3)$ Let $ A, B \in \mathcal{C} $ and suppose that (seeking a contradiction) $ (A \cup B) \setminus \{e\} $ where $ e $ is $ \in (A \cap B) $ does not contain a circuit.\\
+ \noindent Then $ (A \cup B) \setminus \{e\} $ is independent and therefore in $\mathcal{I}.$
  
  \vspace{2mm}
  
@@ -37,7 +37,7 @@ $ e \in C_1 \cap C_2 $, then $ (C_1 \cup C_2 ) \setminus \{e\} $ contains a memb
  
  \vspace{2mm}
  
-\noindent Let $J$ be a maximal independent set of $(A \cup B)$ with the following properties: $S \setminus \{s\} \subset J $ and therefore $ \{s\} \notin J $ but as B is a circuit there must be some element $t \in B$ that is not in $J$. $s$ and $t$ are distinct.
+\noindent Let $J$ be a maximal independent set of $(A \cup B)$ with the following properties: $A \setminus \{s\} \subset J $ and therefore $ \{s\} \notin J $ but as B is a circuit there must be some element $t \in B$ that is not in $J$; $s$ and $t$ are distinct.
  
  \vspace{2mm}
  
@@ -46,9 +46,9 @@ $ e \in C_1 \cap C_2 $, then $ (C_1 \cup C_2 ) \setminus \{e\} $ contains a memb
  
  \vspace{2mm} 
  
- \noindent Now by (I3) we can subsitute elements from $|(A \cup B) \setminus \{e\}|$ into $|(A \cup B) \setminus \{s,t\}|$ that are not in $|(A \cup B) \setminus \{s,t\}|$ but the only elements that fits this condition are $\{s,t\}$ and introducing either of these elements breaks the independence of $J$.
+ \noindent Now by (I3) we can substitute elements from $(A \cup B) \setminus \{e\}$ into $(A \cup B) \setminus \{s,t\}$ that are not in $(A \cup B) \setminus \{s,t\}$ but the only elements that fits this condition are $\{s\}$ and $\{t\}$ and introducing either of these elements breaks the independence of $J$.
  
-\noindent Therefore, $|(A \cup B) \setminus \{e\}|$ must contain a circuit\\
+\noindent Therefore, $(A \cup B) \setminus \{e\}$ must contain a circuit\\
  \end{proof}
  
 \end{document}

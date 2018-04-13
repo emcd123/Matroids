@@ -2,32 +2,22 @@
 \begin{document}
  %\subsection{Circuits in a graph}
  \begin{thm}
- Let $E$ be the edge sets of a graph $G$ and let $\mathcal{C}$ be the edge sets of cycles in $G$.\\
+ Let $E$ be the edge set of a graph $G$ and let $\mathcal{C}$ be the edge sets of cycles in $G$.\\
  \noindent Then $\mathcal{C}$ is the set of circuits of a matroid.
-
  \end{thm}
 
-\noindent\textbf\Proof
-Let $A, B \in \mathcal{C}, A \neq B $ and let $e \in A \cap B $
+\begin{proof}
+Let $A, B \in \mathcal{C}, A \neq B $ and let $e \in A \cap B .$
 
 \vspace{1mm}
 
-\noindent We must now construct a cycle of $G$ whose edge set is contained in $(A \cup B) \setminus \{e\}$
-
-\vspace{2mm}
-
-\noindent For $ i = 1,2,3,...... $ let $P_1$ be a path whose edge set is $ A \setminus \{e\}$\\
-\noindent $ A \setminus \{e\} \in \mathcal{I} $ therefore $P_i$ is not a cycle of $G$. This path will traverse from the edge $a_j$ to $a_u$ where $u,j$ were the vertices connecting the edge e to $(A \cup B) \setminus \{e\}$ to make $A \cup B$.
-
-\vspace{2mm}
-
-\noindent Now perform the same procedure for a path $P_2$ whose edge set is $B \setminus \{e\}$.
-
-\vspace{2mm}
-
-\noindent $P_1$ and $P_2$ should meet at the junctions $u,v$,  where $e$ was removed to make $ (A \cup B) \setminus \{e\}$\\
+\noindent We must now construct a minimal cycle of $G$ whose edge set is contained in $(A \cup B) \setminus \{e\}.$\\
+\noindent For $ i = 1,2,3,...... $ let $P_1$ be a path whose edge set is $ A \setminus \{e\}.$\\
+\noindent $ A \setminus \{e\} \in \mathcal{I} $ therefore $P_1$ is not a cycle of $G$. This path will traverse from the edge $a_j$ to $a_u$ where $u,j$ were the vertices connecting the edge e to $(A \cup B) \setminus \{e\}$ to make $A \cup B$.\\
+\noindent Now perform the same procedure for a path $P_2$ whose edge set is $B \setminus \{e\}.$\\
+\noindent $P_1$ and $P_2$ should meet at the junctions $u,v$,  where $e$ was removed to make $ (A \cup B) \setminus \{e\}.$\\
 \noindent Therefore $P_1 \cup P_2$ should be a cycle of $G$.\\
-\noindent $\implies$ (C3) holds\\
-\noindent $\implies \mathcal{C}$ is the edge sets of cycle in $G$.\\
-\qed
+\noindent $\implies$ (C3) holds.\\
+\noindent $\implies \mathcal{C}$ is the set of circuits in $G$.\\
+\end{proof}
 \end{document}

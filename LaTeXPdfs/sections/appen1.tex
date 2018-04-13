@@ -30,7 +30,6 @@ sub InsertionSort{
 		my $j = $i;
 		while($j>0 && $li[$j-1] > $li[$j]){
 			alias @li[$j,$j-1] = @li[$j-1,$j];
-			#$li[$j], $li[$j-1] = $li[$j-1], $li[$j];
 			$j = $j-1;
 		}
 		$i = $i+1;
@@ -63,7 +62,7 @@ tie %FOREST, 'Tie::IxHash';
 foreach my $j (@V){
 	$FOREST{$j} = [];
 }
-#print Dumper(\%FOREST);
+print Dumper(\%FOREST);
 \end{lstlisting}
 \begin{lstlisting}
 my $temp_edge = 'AB';
@@ -78,6 +77,6 @@ sub MatchVertexEdge{
 MatchVertexEdge($temp_edge);
 \end{lstlisting}
 
-With all this it should be more than possible to implement these processes in almost any language. Better ideas are welcome as pull requests to the repository\cite{github}.
+With all this it should be possible to implement these processes in almost any language. The full implementation can be viewed at the repository\cite{github} and any improvements are welcome as pull requests.
 
 \end{document}
