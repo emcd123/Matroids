@@ -30,8 +30,8 @@ Prove that $(E,\mathcal{I})$ is a matroid if and only if $\mathcal{I}$ satisfies
 \noindent $(I3)'$ If $I_1,I_2$ are in $\mathcal{I}$ and $|I_2|=|I_1|+1$, then there is an element $e \in I_2 \setminus I_1$ such that $I_1 \cup \{e\} \in \mathcal{I}.$
 \end{lem}
 \begin{proof}
-Suppose $(E,\mathcal{I})$ is a matroid. Then by hypothesis, $\mathcal{I}$ satisies $(I1),(I2).$\\
-\noindent Let $I_1,I_2 \in \mathcal{I}$ and $|I_2|=|I_1|+1$ then $|I_2|>|I_1|$ and so $(I3)'$ holds trivially due to the defnition of a matroid.\\
+Suppose $(E,\mathcal{I})$ is a matroid. Then by hypothesis, $\mathcal{I}$ satisfies $(I1),(I2).$\\
+\noindent Let $I_1,I_2 \in \mathcal{I}$ and $|I_2|=|I_1|+1$ then $|I_2|>|I_1|$ and so $(I3)'$ holds trivially due to the definition of a matroid.\\
 Conversely, Suppose $\mathcal{I}$ satisfies $(I2),(I1),(I3)'$\\
 Let $I_1,I_2$ be in $\mathcal{I}$ such that $|I_2|=|I_1|+1$, then there exists $e$ in $I_2 \setminus I_1$ such that $I_1 \cup \{e\}.$\\
 Let $I_1'$ be in $\mathcal{I}$ where $I_1' \supseteq I_1$ then $e$ in $I_1' \setminus I_2$ and $|I_1'|>|I_2|.$ From this we can see that every independent set $A$ with cardinality greater than an independent set $B$ can be shrunk by removing elements while retaining independence due to $(I2)$(the hereditary property) until we have $|A|=|B|+1$ and then we can apply $(I3)'.$ Therefore the matroid property $(I3)$ is satisfied through $(I3)'.$
@@ -41,7 +41,7 @@ Let $I_1'$ be in $\mathcal{I}$ where $I_1' \supseteq I_1$ then $e$ in $I_1' \set
 The above definitions of the \textit{exchange axiom}, defined by $(I3), (I3)'$ will be used interchangeably for the remainder of this paper.
 \end{note}
 
-The following example draws attention to an important property of matroids,their intersection. The intersection of a matroid is not gauranteed to also be a matroid. This example gives a demonstration of the structure of a matroid defined on a set $E.$
+The following example draws attention to an important property of matroids,their intersection. The intersection of a matroid is not guaranteed to also be a matroid. This example gives a demonstration of the structure of a matroid defined on a set $E.$
 \begin{exmp}Let $M_1, M_2$ be matroids on a set $E.$ Let $E=\{1,2,3,4\}$\\
 \noindent Let $\mathcal{I}_1 = \{\emptyset, \{1\},\{2\},\{3\},\{4\},\{1,2\},\{1,3\},\{2,4\},\{3,4\}\}$\\
 \noindent Let $\mathcal{I}_2 = \{\emptyset, \{1\},\{2\},\{3\},\{4\},\{1,2\},\{1,4\},\{2,3\},\{3,4\}\}$\\

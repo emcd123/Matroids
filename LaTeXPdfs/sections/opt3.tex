@@ -1,6 +1,6 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-The following two propositions appear as excercises in Oxley's text\cite{ox_book}
+\noindent The following two propositions appear as excercises in Oxley's text\cite{ox_book}
 \begin{prop}
 Let $M$ be a matroid and $\omega: E(M) \longrightarrow \mathbb{R^+}$ be a one-to-one function. Then $M$ has a unique basis of maximum weight.
 \end{prop}
@@ -11,21 +11,55 @@ We want to find an independent set $A$ whose weight is maximal, where
 \omega(A) := \sum_{e \in A} \omega (e).
 \end{equation}
 We can then arrange our edges in a set $S$ by order of decreasing weight such that $\omega(e_1) \geq \omega(e_2) \geq ... \geq \omega(e_k).$\\
-We have already seen in \textit{theorem 5.1} that the greedy algorithm as described in \textit{algorithm 2/4.1} provides a solution to this optimisation problem. And since there is no repitition in weights there is no point in the algorithm where there is more than a single choice as to the next chosen edge. Therefore there is only one possible solution when our weight function is injective.
+We have already seen in \textit{theorem 5.1} that the greedy algorithm as described in \textit{algorithm 2/4.1} provides a solution to this optimisation problem. And since there is no repetition in weights there is no point in the algorithm where there is more than a single choice as to the next chosen edge. Therefore there is only one possible solution when our weight function is injective.
 \end{proof}
 \begin{rem}
-If we lose the injectivity condition, then this is not the case and we cannot guarantee uniqueness in general. This can be caused by selecting edges of equal weight in differing orders, and by choosing in this way a cycle may be induced and so the order in which those edges of equal weights are selected affects the resulting spanning trees as will be seen in the next theorem.
+If we lose the injectivity condition, then this is not the case and we cannot guarantee uniqueness in general. This can be shown by way of the following example.
+\begin{exmp}
+Let $G$ be the following connected graph, where three edges of this graph carry the same weight. On the right are the three possible spanning trees which can be created from the graph using the greedy algorithm. We can see that the resulting spanning tree is affected by which of the repeated weight edges we choose. $B_G$ is the spanning tree generated through the greedy algorithm.
+\end{exmp}
 \end{rem}
+\begin{minipage}{.2\textwidth}
+ \begin{tikzpicture}
+  \SetGraphUnit{1.5}
+  \Vertex{A}
+  \SOEA(A){B}
+  \SOWE(B){C}
+  \NOWE(C){D}
+  \Edge[label = $3$](A)(B)
+  \Edge[label = $3$](D)(C)
+  \Edge[label = $7$](B)(C)
+  \Edge[label = $3$](D)(A);
+\end{tikzpicture}  
+\textit{Figure: 5.2.1}
+\end{minipage}
+\hspace{3cm} \begin{minipage}{.8\textwidth}
+$B_G^{1} = \{ CD,AD,BC\}$\\
+
+$B_G^{2} = \{CD,BC,AB\}$\\
+
+$B_G^{3} = \{CD,AD, AB\}$
+\end{minipage}
 \begin{prop}
 Let $M=(E,\mathcal{I})$ be a matroid and $\omega: E(M) \longrightarrow \mathbb{R^+}.$ When the greedy algorithm is applied to the pair $(\mathcal{I},\omega)$, each iteration of the greedy algorithm involves a potential choice. Thus, in general, there are a number of different sets that the algorithm can produce as solutions to the optimisation problem $(\mathcal{I}, \omega).$ Let $\mathcal{B}_G$ be the set of such sets and let $\mathcal{B}_{max}$ be the set of maximum weight bases of $M,$ then $\mathcal{B}_G = \mathcal{B}_{max}.$
 \end{prop}
 \begin{proof}
 Suppose $\omega$ is an injective function, then we have shown there is a unique maximum weight basis for $M$ in \textit{theorem 5.4} and so the proof of this trivial.\\
 Now suppose $\omega$ is not injective.This means maximal weight bases of $M$ are not in general unique.\\
-If $r(M) = r,$ then $B_G = \{e_1,e_2, ..., e_r\}$ is a basis of $M.$ Let $B_G'$ be another basis of $M$, $B_G' = \{f_1, f_2, ..., f_r\}.$ Both $B_G, B_G'$ are bases generated through the greedy algorithm as described in \textit{section 4.1}.
+Let $r(M) = r,$ then $B_G = \{e_1,e_2, ..., e_r\}$ is a basis of $M.$ Let $B_G'$ be another basis of $M$, $B_G' = \{f_1, f_2, ..., f_r\}.$ Both $B_G, B_G'$ are bases generated through the greedy algorithm as described in \textit{section 4.1}.
 We arrange both these bases in terms of decreasing order where $\omega(e_1), \omega(f_1)$ are the heaviest elements in their respective bases.\\
-As $\omega$ is not an injective function, at least one element in $B_g$ and $B_G'$ is distinct. We also know from \textit{theorem 5.1} that the greedy algorithm finds a maximal member $B$ of $\mathcal{I}$ of maximum weight.\\
-\indent Therefore, any base generated through the greedy algorithm is maximally weighted. Meaning, that $\omega(B_G) = \omega(B_G').$ As if $\omega(B_G) < \omega(B_G')$ then this would mean the greedy algorithm does not find a solution to our optimisation problem, contradicting \textit{theorem 5.1}.
-And therefore, $\omega(e_j) = \omega(f_j)$ $ \forall j$ and since all these bases are maximally weighted, $\implies \mathcal{B}_G = \mathcal{B}_{max}.$
+If $B_G = B_G'$, then we have nothing to show.\\
+Then suppose, $B_G \neq B_G'$. Let $e_k \neq f_k$ be the first element at which the two bases differ. Since the greedy algorithm generates maximally weighted bases of the matroid then $\omega(e_k) = \omega(f_k)$ and thus $\omega(B_G) = \omega(B_G').$ Therefore, all bases generated by the greedy algorithm are maximally weighted.\\ $\implies \mathcal{B_G} \subseteq \mathcal{B}_{max}.$\\
+It remains now to be shown that $\mathcal{B_G} \supseteq \mathcal{B}_{max}$.\\
+Let $B_M$ in $\mathcal{B}_{max}$ be a maximal basis of $M.$ All bases have the same rank so let $r(M)=r$, so $B_m = \{e_1,e_2,...,e_r\}.$ We can then order the elements of $B_M$ in decreasing order as before.\\
+\indent Suppose now $B_M^{1} \in \mathcal{B}_{max},B_M^{1}$ is also a maximal basis with elements ordered in decreasing weight. Thus, $B_m^{1} = \{f_1,f_2,...,f_r\}.$\\
+If $B_M \neq B_M^{1}$, then let $e_k \neq f_k$ be the first elemet in which $B_M$ and $B_M^{1}$ differ.\\
+Since $B_M,B_M^{1} \in \mathcal{B}_{max}, \omega(B_M) = \omega(B_M^{1})$, otherwise we contradict their maximality. Therefore, $\omega(e_k) = \omega(f_k))$ and thus we have, $\omega(e_i) = \omega(f_i)$ for all $i.$\\
+\indent From this we can see that both $B_M$ and $B_M^{1}$ can be generated by the greedy algorithm as described in \ref{matroid_ver}, where at the $e_j,f_j$ where the bases differ we choose one of these equal weight elements at random and thus generating different bases based on that choice.\\
+Since the chosen elements of $\mathcal{B}_{max}$ were arbitrary we can repeat this argument as many times as necessary using the $B_{M}^{i}$ to generate all the elements of $\mathcal{B}_{max}$ through the greedy algorithm.\\
+$\implies \mathcal{B}_{max} \subseteq \mathcal{B_G}.$\\
+$\implies \mathcal{B_G} = \mathcal{B}_{max}.$
+
+
 \end{proof}
 \end{document}

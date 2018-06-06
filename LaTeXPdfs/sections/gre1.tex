@@ -46,7 +46,7 @@ A \textit{greedoid} is a pair $(E,\mathcal{S})$ where $E$ is a finite ground set
 \end{defn}
 Unfortunately the greedy algorithm while providing solutions does not gaurantee optimal solutions for all greedoids. To characterise the greedoids that do result in optimal solutions when the greedy algorithm is applied we must add to our existing machinery an additional axiom. This is called the \textit{strong exchange axiom}. This axiom is a strong version of (I3): the exchange axiom of a matroid. 
 \begin{prop}
-Let $M=(E,\mathcal{S})$ be a greedoid. Then the above modified greedy algorithm  finds an optimal soltuion to our problem for any weight function $\omega:E \longrightarrow \mathbb{R^+}$ if and only if $M$ satisfies the follwing axiom:\\
+Let $M=(E,\mathcal{S})$ be a greedoid. Then the above modified greedy algorithm  finds an optimal solution to our problem for any weight function $\omega:E \longrightarrow \mathbb{R^+}$ if and only if $M$ satisfies the following axiom:\\
 (SE): For $A,B \in \mathcal{S}$ with $|A|=|B|+1$, there always exists some $e \in A \setminus B$ such that $B \cup \{e\}$ and $A \setminus \{e\}$ are contained in $\mathcal{S}.$ Which is very reminiscent of \textit{lemma 1.3}.
 \end{prop}
 \begin{rem}

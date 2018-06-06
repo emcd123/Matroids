@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.20)  13 APR 2018 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.20)  16 APR 2018 23:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -997,38 +997,43 @@ LaTeX Font Info:    ... okay on input line 90.
 \everyMPtoPDFconversion=\toks50
 ) ABD: EveryShipout initializing macros
 \c@lstlisting=\count179
-LaTeX Font Info:    Try loading font information for U+msa on input line 92.
+ (./sections/cover.tex
+<images/logo.png, id=4, 501.875pt x 309.155pt>
+File: images/logo.png Graphic file (type png)
+ <use images/logo.png>
+Package pdftex.def Info: images/logo.png used on input line 34.
+(pdftex.def)             Requested size: 241.49895pt x 148.76537pt.
+ [1
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.png>] [1])
+(./main.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 92.
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+rsfs on input line 92.
+LaTeX Font Info:    Try loading font information for OMS+rsfs on input line 3.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/calrsfs/OMSrsfs.fd) (./main.toc)
+(/usr/share/texlive/texmf-dist/tex/latex/calrsfs/OMSrsfs.fd))
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./sections/abstract.tex) 
-(./sections/introduction.tex
+ [2]
+(./sections/abstract.tex) (./sections/introduction.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-[2]) (./sections/intro2.tex [3]) (./sections/intro3.tex [4]
+[3]) (./sections/intro2.tex [4]) (./sections/intro3.tex [5]
 Overfull \hbox (31.4779pt too wide) in paragraph at lines 148--149
 [][] 
  []
 
-) (./sections/intro4.tex [5]
+[6]) (./sections/intro4.tex
 Overfull \hbox (69.31203pt too wide) in paragraph at lines 34--36
 [][]
  []
@@ -1038,7 +1043,7 @@ Overfull \hbox (127.64204pt too wide) in paragraph at lines 53--55
 [][]
  []
 
-
+[7]
 Overfull \hbox (12.40654pt too wide) in paragraph at lines 82--84
 [][]
  []
@@ -1048,79 +1053,111 @@ Overfull \hbox (21.57736pt too wide) in paragraph at lines 71--90
 []$[]$   $[]$
  []
 
-[6]) [7] (./sections/charintro.tex) (./sections/char1.tex [8])
-(./sections/char12.tex) (./sections/char2.tex [9]) (./sections/char21.tex
-[10]) [11] (./sections/g1.tex
+) [8] (./sections/charintro.tex) (./sections/char1.tex [9])
+(./sections/char12.tex) [10] (./sections/char2.tex) (./sections/char21.tex
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 30--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+) [12] (./sections/g1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--76
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--80
-
- []
-
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
 
  []
 
-) [14] (./sections/algo1.tex [15]) [16] (./sections/algo2.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--77
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+) [15] (./sections/algo1.tex [16]) [17] (./sections/algo2.tex
 Underfull \hbox (badness 10000) in paragraph at lines 29--35
 
  []
 
-) (./sections/opt1.tex [17]) (./sections/opt3.tex [18]) (./sections/opt2.tex
-[19]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+) (./sections/opt1.tex [18]) (./sections/opt3.tex [19]
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (40.85927pt too wide) in paragraph at lines 33--35
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Overfull \hbox (104.80269pt too wide) in paragraph at lines 22--43
+[]$[]$   $[]$ 
+ []
+
+[20]) (./sections/opt2.tex [21]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 32.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-) [20] (./sections/greeintro.tex) (./sections/gre1.tex [21])
-(./sections/conclusion.tex) [22] (./sections/appenintro.tex)
-(./sections/algo3.tex) (./sections/appen1.tex [23] [24]) [25]
-Underfull \hbox (badness 1845) in paragraph at lines 159--160
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
+
+ []
+
+) [22] (./sections/greeintro.tex) (./sections/gre1.tex [23])
+(./sections/conclusion.tex) [24] (./sections/appenintro.tex)
+(./sections/algo3.tex) (./sections/appen1.tex [25] [26]) [27]
+Underfull \hbox (badness 1845) in paragraph at lines 160--161
 []\OT1/cmr/m/n/10 Dominic J.A. Welsh, A bound for the num-ber of ma-troids, Jou
 r-
  []
 
 
-Underfull \hbox (badness 7273) in paragraph at lines 159--160
+Underfull \hbox (badness 7273) in paragraph at lines 160--161
 \OT1/cmr/m/n/10 nal of Com-bi-na-to-rial The-ory, Vol-ume 6, Is-sue 3, 1969, Pa
 ges
  []
 
-[26] (./main.aux) ) 
+[28] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 17756 strings out of 494910
- 322990 string characters out of 6179835
- 421951 words of memory out of 5000000
- 20599 multiletter control sequences out of 15000+600000
- 15327 words of font info for 62 fonts, out of 8000000 for 9000
+ 17778 strings out of 494910
+ 323240 string characters out of 6179835
+ 423951 words of memory out of 5000000
+ 20616 multiletter control sequences out of 15000+600000
+ 13923 words of font info for 56 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,10n,72p,858b,1693s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,10n,72p,859b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
 12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb>
@@ -1131,22 +1168,22 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (26 pages, 341429 bytes).
+ublic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/rsfs/rsfs7.pfb>
+Output written on main.pdf (29 pages, 396463 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
+ 198 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 19 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 24 words of extra memory for PDF output out of 10000 (max. 10000000)
 

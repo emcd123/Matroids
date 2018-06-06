@@ -5,14 +5,16 @@
 A base is a maximally independent subset of $\mathcal{I}.$\\
 \noindent As seen previously all maximally independent sets in a matroid have the same cardinality.
 \end{defn}
-
+\begin{defn}
+The rank of a matroid is equal to the cardinality of it's bases. The rank is denoted as $r(M)$ for a matroid M.
+\end{defn}
 \begin{thm}
  Let $\mathcal{B}$ be a set of subsets of a finite set E. Then $\mathcal{B}$ is the collection of bases of a matroid on E if and only if $\mathcal{B}$ satisfies the following conditions:\\
  (B1) $\mathcal{B}$ is non-empty.\\
  (B2) If $B_1$ and $B_2$ are members of $\mathcal{B}$ and $x \in B_1 \setminus B_2$, then there is an element $y$ of $B_1 \setminus B_2$ such that $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$.
  \end{thm}
 
-\noindent \Proof \\
+\begin{proof}
 \noindent By (I1) $\emptyset$ is always independent, so $\mathcal{B}$ must always contain at least the $\emptyset$, (B1) holds.\\
 \noindent Let $B_1 ,B_2 \in \mathcal{B}, B_1 \neq B_2.$ \\
 \noindent $|B_1| = |B_2|$ so (I3) does not directly apply here, as any element of cardinality larger that $|B_i|,$ where $B_i \in \mathcal{B}$ will be contained in $\mathcal{C}$(the set of circuits).\\
@@ -25,15 +27,32 @@ $\implies (B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$, (B2) holds.
 
 \vspace{4mm}
 
-\noindent Conversely, suppose that $\mathcal{B}$ satisfies (B1) and (B2).\\
+\noindent Conversely, suppose that $\mathcal{B}$ satisfies (B1) and (B2) (this direction is much more difficult and appears in Oxley's text\cite{ox_book}).\\
 \noindent By (B1), $\mathcal{B}$ is always non-empty which shows (I1) holds.
 \\
 \noindent By definition, a base $B_1 \in \mathcal{B}$ is a maximally independent subset of E. Then for all $B_i \in \mathcal{B}$ the subsets $b_{i,k} \subseteq B_i$  are independent. Therefore all the $b_{i,k}$ are in $\mathcal{I}.$\\ \noindent $\implies$ (I2) holds. Showing a matroid can be generated through the bases.
 \\
-\noindent Next, assume that (I3) fails. That, for $I_1, I_2 \in \mathcal{I}$, where $|I_1| = |I_2|+1,$\\ \noindent there exists a  $y \in I_1 \setminus I_2$ such that $I_2 \cup \{y\} \in \mathcal{I}.$\\
-\noindent Let $B_1, B_2 \in \mathcal{B}, |B_1| = |B_2|.$\\
-\noindent Let $x \in B_1 \setminus B_2$ then $B_1 \setminus \{x\} \subset B_1.$ \\ \noindent $\implies B_1 \setminus \{x\}$ is independent.\\
-\noindent Then there exists a $y \in B_2 \setminus (B_1 \setminus \{x\})$ such that $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$ from (B2). And if $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}$ it is also in $\mathcal{I}$. A contradiction.\\ \noindent $\implies$ (I3) holds and we have a matroid.
+\noindent Next, assume that (I3) fails. That, for $I_1, I_2 \in \mathcal{I}$, where $|I_1|<|I_2|,$\\ \noindent there does not exist a  $y \in I_1 \setminus I_2$ such that $I_2 \cup \{y\} \in \mathcal{I}.$\\
+\noindent Let $B_1, B_2 \in \mathcal{B}, |B_1| = |B_2|$ such that $I_1 \subseteq B_1$ and $I_2 \subseteq B_2.$\\
+Assume $B_2$ is chosen in such a way as to ensure that $|B_2 \setminus (I_2 \cup B_1)|$ is minimal. By above choice of $I_1,I_2$ we have:\\
+\begin{equation}
+I_2 \setminus B_1 = I_2 \setminus I_1
+\end{equation}
 
-\qed
+Now suppose that $B_2 \setminus (I_2 \cup B_1)$ is non-empty. Then we can choose an element $x$ from this resulting set and apply $(B2)$, which says there is an element $y$ in $B_1 \setminus B_2$ such that $(B_2 \setminus \{x\}) \cup \{y\} \in \mathcal{B}.$ But then\\
+\begin{equation}
+|((B_2 \setminus \{x\}) \cup \{y\}) \setminus (I_2 \cup B_1)| < |B_2 \setminus (I_2 \cup B_1)|
+\end{equation}
+\noindent And thus the choice of $B_2$ is contradicted. Hence $B_2 \setminus (I_2 \cup B_1)$ is empty and so $B_2 \setminus B_1 = I_2 \setminus B_1.$ Therefore,
+\begin{equation}
+B_2 \setminus B_1 = I_2 \setminus I_1
+\end{equation}
+\noindent Next we must show that $B_1 \setminus (I_1 \cup B_2)$ is empty. If not then $(B2)$ can be applied and $(B_1 \setminus \{x\}) \cup \{y\} \in \mathcal{B}.$\\
+Now, $I_1 \cup \{y\} \subseteq  (B_1 \setminus \{x\}) \cup \{y\}$ so $I_1 \cup \{y\} \in \mathcal{I}.$ Since $y \in B_2 \setminus B_1$, it follows by (3) that $y \in I_2 \setminus I_1$ and so we reach a contradiction to our inital assumption, We conclude that $B_1 \setminus (I_1 \cup B_2)$ is empty. Hence $B_1 \setminus B_2 = I_1 \setminus B_2.$\\
+Since the last set is contained in $ I_2 \setminus I_1$, it follows that
+\begin{equation}
+I_2 \setminus B_1 \subseteq I_2 \setminus I_1
+\end{equation}
+As all the bases have the same cardinality so by (3) and (4) we see that\\ $I_1 \setminus I_2 \geq I_2 \setminus I_1$ so $|I_1| \geq |I_2|.$ This contradicts our choice of independent sets. And so we have that the pair $(E,\mathcal{I})$ is a matroid.
+\end{proof}
 \end{document}

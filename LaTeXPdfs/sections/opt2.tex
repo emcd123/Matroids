@@ -1,6 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \subsection{Cryptomorphism: Greedy}
+The following theorem appears in Oxley's text\cite{ox_book} which gives us another cryptomorphism of matroids. From this proof we can see that the greedy algorithm is not optimal for hereditary systems unless that system is also a matroid.
 \begin{thm}
 Let $\mathcal{I}$ be a collection of subsets of a set $E.$ Then $(E,\mathcal{I})$ is a matroid if and only if $\mathcal{I}$ satisfies the following conditions:\\
 $(I1)$ $\emptyset \in \mathcal{I}$\\
@@ -11,7 +12,7 @@ $(G)$ For all weight functions $\omega:E \longrightarrow \mathbb{R^+},$ the gree
 Suppose $(E,\mathcal{I})$ is a matroid. Then $\emptyset \in \mathcal{I}$ and (I2) holds trivially.
 And by \textit{theorem 5.2} we know that the greedy algorithm can find a maximal member $B \in \mathcal{B}$ of maximum weight if $(E,\mathcal{I})$ is a matroid.\\
 Conversely, suppose $(E,\mathcal{I})$ is a pair satisfying $(I1),(I2)$ and $(G).$ Need to prove $\mathcal{I}$ satisfies $(I3)$ in order to have a matroid.\\
-Suppose that (seeking a contradiction), if $I_1,I_2 \in \mathcal{I}$ with $|I_2|>|I_1|$ such that $I_1 \cup \{e\} \in \mathcal{I}.$\\
+Suppose that (seeking a contradiction), if $I_1,I_2 \in \mathcal{I}$ with $|I_2|>|I_1|$ where there does not exist an $e \in I_2 \setminus I_1$ such that $I_1 \cup \{e\} \in \mathcal{I}.$\\
 Now, $|I_1 \setminus I_2| < |I_2 \setminus I_1|$ and $I_1 \setminus I_2$ is non-empty.\\
 So we can choose an $\epsilon>0$ such that
 \begin{equation}
@@ -20,10 +21,10 @@ So we can choose an $\epsilon>0$ such that
 Define $\omega:E \longrightarrow \mathbb{R^+}$ by:
 \[
 \omega(e) = \begin{cases}
-               2 if e \in I_1 \cap I_2 \\
-               \frac{1}{|I_1 \setminus I_2|} if e \in I_1 \setminus I_2\\
-               \frac{1+\epsilon}{|I_2 \setminus I_1|} if e \in I_2 \setminus I_1 \\
-               0, otherwise.
+               2 ,$ if $ e \in I_1 \cap I_2 \\
+               \frac{1}{|I_1 \setminus I_2|} ,$ if $ e \in I_1 \setminus I_2\\
+               \frac{1+\epsilon}{|I_2 \setminus I_1|},$ if $ e \in I_2 \setminus I_1 \\
+               0, $ otherwise.$
             \end{cases}
 \]\\
 We need the greedy algorithm to fail for only one weight function to get our contradiction.

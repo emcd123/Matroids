@@ -2,10 +2,10 @@
 
 \begin{document}
 \subsection{Depth-first Search}
-The following search algorithm is how we will determine the connected components of a disconnected graph. We do this by selecting an arbitrary vertex of the graph as the "root". And then exploring along the branches from the vertex as far as possible until we need to backtrack, at which point we choose a new undiscovered arbitrary root and repeat. Labelling each vertex discovered along that exploration as discovered. The aim is to discover all the vertices of the graph.
+The following search algorithm is how we will determine the connected components of a disconnected graph. We do this by selecting an arbitrary vertex of the graph as the "root". And then exploring along the branches from the vertex as far as possible until we need to backtrack, at which point we choose a new undiscovered arbitrary root and repeat. Labeling each vertex discovered along that exploration as discovered. The aim is to discover all the vertices of the graph.
 
 \begin{algorithm}[H]
-\caption{DFS}\label{dfs}
+\caption{DFS\cite{wiki}}\label{dfs}
 Let $G$ be a graph with vertex set $V = \{1,...,n\}$
 \begin{algorithmic}[1]
 \Procedure{DFS}{$G,V$}

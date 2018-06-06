@@ -2,7 +2,7 @@
 \begin{document}
 \subsection{Graphs are Matroids} 
 \begin{thm}
-\noindent Let $G$ be a graph and $\mathcal{I}$ be the set of all cyclefree subgraphs of G.
+\noindent Let $G$ be a graph and $\mathcal{I}$ be the set of all cycle-free subgraphs of G.
 Show that if we have the pair $(E,\mathcal{I})$ as defined above by our graph, we have a matroid. In other words, that the cycle matroid $M(G)$ of a graph is a matroid.
 \end{thm} 
 \begin{proof}
@@ -86,6 +86,6 @@ Show that if we have the pair $(E,\mathcal{I})$ as defined above by our graph, w
 Picture \textit{figure 1.4.3} in place of \textit{figure 1.4.1} above and observe how this would affect the graph of $B$ in \textit{figure 1.4.2}
  \end{minipage}
 \noindent We use the same argument as in Case 1 only here we need two distinct $b_i \in P( b_j, b_k)$ where $b_i \in B \setminus A$ such that  $P(b_j , b_k ) \cup \{ a_i \}$ is a cycle. This can be seen in the diagram above, there must be another edge in the union of the paths which is in $B \setminus A$ or else we get a cycle in $A.$ Otherwise,$P(b_j,b_k) \subset A$ then $P(b_j,b_k) \cup \{ a_i \}$  would be a circuit and then $A \notin I.$ Therefore, $|B| \geq |A|$, and we have a contradiction.\\
-\noindent Hence I3 holds.
+\noindent Hence (I3) holds.
 \end{proof}
  \end{document}

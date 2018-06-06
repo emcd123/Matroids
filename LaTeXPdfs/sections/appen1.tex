@@ -3,7 +3,7 @@
 The following algorithm is useful towards implementing the greedy algorithm as described in \textit{section 4} due to the fact that the elements of the edge set of a graph $G$ must be sorted in terms of their weights. The following process is a straightforward method to arrange your elements in the desired order.
 
 \begin{algorithm}[H]
-\caption{Insertion Sort}\label{sorting}
+\caption{Insertion Sort\cite{wiki}}\label{sorting}
 Let $A$ be an unsorted list containing real number positive values (to match our weight functions).
 \begin{algorithmic}[1]
 \Procedure{INSERTION}{$A$}
@@ -39,6 +39,7 @@ InsertionSort(@li);
 \end{lstlisting}
 
 In terms of storing the graphs and weights while coding, the method I used in my implementation of Kruskal's algorithm involved use of Perl5's hash structure. A perl has is simply a list defined by key-values pairs, also known as an associative array. The code snippets below demonstrate how weights are associated with the edges, how the graph is initialised and how the edges are associated with a particular vertex.
+\pagebreak
 \begin{lstlisting}
 use strict;
 use warnings;
@@ -77,6 +78,6 @@ sub MatchVertexEdge{
 MatchVertexEdge($temp_edge);
 \end{lstlisting}
 
-With all this it should be possible to implement these processes in almost any language. The full implementation can be viewed at the repository\cite{github} and any improvements are welcome as pull requests.
+With all this it should be possible to implement these processes in almost any language. The full implementation can be viewed at the repository\cite{github}. Thank you for reading!
 
 \end{document}
